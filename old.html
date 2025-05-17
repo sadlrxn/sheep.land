@@ -1,0 +1,1458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sheep Land | Premium Quality & Halal Meat | أرض الأغنام: جودة عالية ولحوم حلال</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Kufi+Arabic:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<style>
+/* style.css */
+:root {
+    /* --- Color Palette Revamp --- */
+    --primary-brand: #5D4037;
+    --primary-brand-light: #8D6E63;
+    --primary-brand-dark: #3E2723;
+
+    --accent-natural: #386641;
+    --accent-natural-light: #A3B18A;
+    --accent-natural-dark: #2A482E;
+
+    --highlight-cta: #F28C28;
+    --highlight-cta-dark: #D47515;
+
+    --text-main: #212529;
+    --text-headings: var(--primary-brand-dark);
+    --text-muted: #6c757d;
+    --text-on-dark-bg: #F8F9FA;
+    --text-on-highlight: var(--primary-brand-dark);
+
+    --bg-main: #FAF8F5;
+    --bg-alt: #F0EBE3;
+    --bg-card: #FFFFFF;
+
+    --border-standard: #DDE0E3;
+    --border-subtle: #E9ECEF;
+
+    /* --- Typography --- */
+    --font-en: 'Inter', sans-serif;
+    --font-ar: 'Noto Kufi Arabic', sans-serif;
+    --font-size-base: 16px;
+    --line-height-base: 1.7;
+    --letter-spacing-headings: -0.03em;
+
+    /* --- Spacing & Sizing --- */
+    --sp-1: 0.25rem; --sp-2: 0.5rem; --sp-3: 0.75rem; --sp-4: 1rem;
+    --sp-5: 1.5rem; --sp-6: 2rem; --sp-7: 3rem; --sp-8: 4.5rem;
+    --sp-section-vertical: var(--sp-8);
+    --sp-section-horizontal: var(--sp-5);
+    --container-max-width: 1280px;
+
+    /* --- Borders & Shadows --- */
+    --radius-sm: 6px; --radius-md: 10px; --radius-lg: 16px;
+    --shadow-sm: 0 2px 4px rgba(0,0,0,0.05);
+    --shadow-md: 0 5px 15px rgba(0,0,0,0.08);
+    --shadow-lg: 0 10px 30px rgba(0,0,0,0.1);
+    --primary-brand-rgb: 93, 64, 55; /* For rgba() shadows */
+    --shadow-interactive: 0 4px 10px rgba(var(--primary-brand-rgb), 0.15);
+}
+
+/* --- Global Resets & Base Styles --- */
+*, ::after, ::before { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; font-size: var(--font-size-base); }
+body {
+    font-family: var(--font-en);
+    line-height: var(--line-height-base);
+    color: var(--text-main);
+    background-color: var(--bg-main);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+img { max-width: 100%; height: auto; display: block; }
+.img-fluid { max-width: 100%; height: auto; }
+.rounded { border-radius: var(--radius-md); }
+a {
+    text-decoration: none;
+    color: var(--accent-natural);
+    transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+a:hover { color: var(--accent-natural-dark); }
+
+/* --- Typography --- */
+h1, h2, h3, h4 {
+    font-weight: 700;
+    line-height: 1.25;
+    color: var(--text-headings);
+    margin-bottom: var(--sp-4);
+    letter-spacing: var(--letter-spacing-headings);
+}
+h1 { font-size: clamp(2.5rem, 6vw, 4rem); }
+h2 { font-size: clamp(2rem, 5vw, 3rem); }
+h3 { font-size: clamp(1.6rem, 4vw, 2.2rem); }
+h4 { font-size: clamp(1.2rem, 3vw, 1.75rem); }
+p { margin-bottom: var(--sp-4); }
+
+/* --- Layout & Container --- */
+.container {
+    width: 90%;
+    max-width: var(--container-max-width);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--sp-section-horizontal);
+    padding-right: var(--sp-section-horizontal);
+}
+.section { padding: var(--sp-section-vertical) 0; position: relative; }
+.section-alt { background-color: var(--bg-alt); }
+.section-header { text-align: center; margin-bottom: var(--sp-7); }
+.section-title::after {
+    content: ''; display: block; width: 80px; height: 3px;
+    background-color: var(--accent-natural-light);
+    margin: var(--sp-3) auto 0; border-radius: 3px;
+}
+.section-subtitle {
+    font-size: 1.1rem; color: var(--text-muted);
+    max-width: 750px; margin-left: auto; margin-right: auto;
+    margin-top: var(--sp-2); line-height: 1.8;
+}
+
+/* --- Grids --- */
+.grid { display: grid; gap: var(--sp-5); }
+.grid-cols-1 { grid-template-columns: 1fr; }
+.grid-cols-2 { grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); }
+.grid-cols-3 { grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); }
+.grid-cols-4 { grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr)); }
+.gap-sm { gap: var(--sp-3); }
+.gap-lg { gap: var(--sp-6); }
+.align-items-center { align-items: center; }
+
+/* --- Header --- */
+.header {
+    background-color: hsla(0,0%,100%,0.85);
+    -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.07);
+    position: sticky; top: 0; z-index: 1000; padding: var(--sp-3) 0;
+}
+.main-header { display: flex; justify-content: space-between; align-items: center; }
+.logo { display: flex; align-items: center; gap: var(--sp-2); font-weight: 700; font-size: 1.75rem; color: var(--primary-brand-dark); }
+.logo img { height: 50px; border-radius: 50%; }
+.footer-logo img { border: 2px solid var(--primary-brand-light); }
+
+.nav-menu { display: none; list-style: none; gap: var(--sp-2); }
+.nav-link {
+    padding: var(--sp-2) var(--sp-3); color: var(--text-main);
+    font-weight: 500; font-size: 0.95rem; border-radius: var(--radius-sm);
+    transition: background-color 0.2s, color 0.2s, transform 0.15s ease-out;
+    display: inline-flex; align-items: center; gap: var(--sp-2);
+}
+.nav-link:hover {
+    background-color: var(--accent-natural-light);
+    color: var(--accent-natural-dark);
+    transform: translateY(-2px);
+}
+.nav-link.active {
+    background-color: var(--accent-natural);
+    color: var(--text-on-dark-bg); font-weight: 600;
+}
+.nav-item.dropdown { position: relative; }
+.dropdown-toggle::after {
+    content: '\f078'; font-family: "Font Awesome 6 Free"; font-weight: 900;
+    margin-left: var(--sp-1); font-size: .7em; transition: transform .2s;
+}
+.nav-item.dropdown.open .dropdown-toggle::after { transform: rotate(180deg); }
+.dropdown-menu {
+    display: none; position: absolute; top: calc(100% + 5px); left: 0;
+    min-width: 240px; background-color: var(--bg-card);
+    box-shadow: var(--shadow-md); border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md); padding: var(--sp-2) 0; z-index: 1001;
+    opacity: 0; visibility: hidden; transform: translateY(10px);
+    transition: opacity .2s ease,visibility .2s ease,transform .2s ease;
+}
+.nav-item.dropdown.open .dropdown-menu,
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block; opacity: 1; visibility: visible; transform: translateY(0);
+}
+.dropdown-item {
+    display: block; padding: var(--sp-2) var(--sp-4);
+    color: var(--text-main); font-size: .95rem;
+}
+.dropdown-item:hover {
+    background-color: var(--accent-natural-light);
+    color: var(--accent-natural-dark);
+}
+.nav-tools { display: flex; align-items: center; gap: var(--sp-3); }
+.currency-select {
+    border: 1px solid var(--border-standard); border-radius: var(--radius-sm);
+    padding: var(--sp-1) var(--sp-2); font-size: .85rem;
+    background-color: var(--bg-card); color: var(--text-main); font-family: var(--font-en);
+}
+.nav-tool { position: relative; color: var(--text-muted); font-size: 1.25rem; padding: var(--sp-1); transition: color .2s; }
+.nav-tool:hover { color: var(--accent-natural); }
+.tool-count {
+    position: absolute; top: -3px; right: -6px; min-width: 20px; height: 20px;
+    background-color: var(--highlight-cta); color: var(--text-on-highlight);
+    font-weight: 700; font-size: .7rem; border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    padding: 0 5px; border: 2px solid var(--bg-card);
+}
+.mobile-toggle { display: block; background:0 0; border:none; font-size:1.6rem; cursor:pointer; color:var(--primary-brand-dark); z-index:1002; }
+
+/* --- Hero Section --- */
+.hero { padding: var(--sp-8) 0 var(--sp-7) 0; min-height: 80vh; color: var(--text-on-dark-bg); display: flex; align-items: center; overflow: hidden; position:relative; }
+.hero-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -2; filter: brightness(0.5) contrast(1.1) saturate(0.9); }
+.hero-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(90deg, rgba(var(--primary-brand-rgb), 0.65) 0%, rgba(var(--primary-brand-rgb), 0.2) 60%, transparent 100%); z-index: -1; }
+.hero-content { max-width: 90%; }
+.hero .bi-ling { align-items:center; text-align:center; max-width:100%; }
+.hero .bi-ling .en, .hero .bi-ling .ar { text-align:center!important; }
+.hero-title { color: var(--text-on-dark-bg); text-shadow: 0 3px 8px rgba(0,0,0,0.5); margin-bottom: var(--sp-5); font-size: clamp(2.4rem, 5.5vw, 3.8rem); }
+.hero-text { font-size: clamp(1.15rem, 2.5vw, 1.4rem); opacity: .9; margin-bottom: var(--sp-5); text-shadow:0 1px 3px rgba(0,0,0,.4); max-width:800px; margin-left:auto; margin-right:auto;}
+.hero-actions { display: flex; justify-content: center; gap: var(--sp-4); flex-wrap: wrap; }
+
+/* --- Promo Section (Eid Countdown) --- */
+.promo-section { padding-top:var(--sp-5); padding-bottom:var(--sp-5); margin-top: -4rem; position: relative; z-index: 5; }
+.promo-banner {
+    background: linear-gradient(135deg, var(--highlight-cta), #FFD1A3 );
+    color: var(--text-on-highlight);
+    border-radius: var(--radius-lg); padding: var(--sp-5) var(--sp-6);
+    box-shadow: var(--shadow-lg); display: flex; justify-content: space-between;
+    align-items: center; gap: var(--sp-5);
+}
+.promo-banner-content { display: flex; align-items: center; gap: var(--sp-4); }
+.promo-banner-content i { font-size: 2.5rem; color: var(--primary-brand-dark); opacity: .8; }
+.promo-banner .bi-ling { gap: var(--sp-1); }
+.promo-banner h3 { color: var(--primary-brand-dark); font-size: clamp(1.4rem, 3vw, 1.8rem); margin-bottom: var(--sp-1); }
+.promo-banner p { font-size: 1rem; margin-bottom: 0; color: var(--primary-brand-dark); opacity: 0.9; }
+.promo-banner p span { color: var(--primary-brand-dark); font-weight: 700; }
+.promo-banner .btn-warning {
+    background-color: var(--bg-card); color: var(--highlight-cta-dark); box-shadow: var(--shadow-sm);
+}
+.promo-banner .btn-warning:hover { background-color: var(--primary-brand-dark); color: var(--text-on-dark-bg); }
+
+/* --- Feature Item --- */
+.features-grid { gap: var(--sp-4); }
+.feature-item {
+    background-color: transparent; box-shadow: none; padding: var(--sp-4);
+    border-radius: var(--radius-lg); transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    text-align: center;
+}
+.feature-item:hover {
+    background-color: var(--bg-card); transform: translateY(-8px); box-shadow: var(--shadow-md);
+}
+.feature-icon-wrapper {
+    width: 70px; height: 70px; background-color: var(--accent-natural-light);
+    border-radius: 50%; display: flex; align-items: center; justify-content: center;
+    margin: 0 auto var(--sp-4); color: var(--accent-natural-dark); font-size: 2rem;
+    box-shadow: var(--shadow-sm); transition: .3s;
+}
+.feature-item:hover .feature-icon-wrapper {
+    background-color: var(--accent-natural); color: var(--text-on-dark-bg);
+    transform: scale(1.1) rotate(-5deg);
+}
+.feature-title { color: var(--text-headings); margin-top:0; margin-bottom:var(--sp-2); }
+.feature-text { font-size: .95rem; color: var(--text-muted); line-height: 1.6; }
+
+/* --- Card --- */
+.card {
+    background-color: var(--bg-card); border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm); border: 1px solid var(--border-subtle);
+    transition: box-shadow 0.3s ease-out, transform 0.3s ease-out;
+    overflow: hidden; display: flex; flex-direction: column; height: 100%;
+}
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg), 0 0 0 3px var(--accent-natural-light);
+}
+.card-img-wrapper { position: relative; padding-top: 70%; overflow: hidden; }
+.card-img-wrapper img { position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; transition:transform .4s ease-out; }
+.product-card:hover .card-img-wrapper img { transform: scale(1.1); }
+.card-body { padding: var(--sp-5); flex-grow:1; display:flex; flex-direction:column; }
+.card-title { font-size: 1.4rem; color: var(--text-headings); margin-bottom: var(--sp-2); }
+.card-text { font-size:.95rem; color:var(--text-muted); margin-bottom:var(--sp-3); flex-grow:1; line-height:1.6; }
+.card-price {
+    font-size: 1.5rem; font-weight: 700;
+    color: var(--primary-brand); margin-bottom: var(--sp-4);
+}
+.card-actions { display:flex; gap:var(--sp-2); margin-top:auto; align-items:stretch; }
+.card-actions .form-control { flex-grow:1; height:auto; background-color: var(--bg-main); border-color: var(--border-standard); }
+.card-actions .btn { flex-shrink:0; padding-left:var(--sp-3); padding-right:var(--sp-3); }
+
+.card-info { background-color:var(--bg-alt); padding:var(--sp-5); }
+.card-info .card-title { color:var(--primary-brand-dark); }
+.info-box { padding:var(--sp-4); background-color:var(--bg-card); border-radius:var(--radius-md); box-shadow:var(--shadow-sm); }
+.info-box i { color:var(--primary-brand); margin-bottom:var(--sp-2); font-size:1.8rem; }
+.info-box h4 { font-size:1.15rem; margin-bottom:var(--sp-1); }
+
+/* Badges */
+.badge {
+    position:absolute; top:var(--sp-3); left:var(--sp-3);
+    font-size: .75rem; font-weight: 600; padding: var(--sp-1) var(--sp-3);
+    border-radius: var(--radius-lg); color: var(--text-on-dark-bg); z-index:1;
+    text-transform:uppercase; letter-spacing:.8px; box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+.badge-breed { background-color: var(--primary-brand-dark); }
+.badge-halal { background-color: var(--accent-natural-dark); }
+.badge-sale { background-color: var(--highlight-cta); color: var(--text-on-highlight); }
+.wishlist-btn {
+    position:absolute; top:var(--sp-3); right:var(--sp-3); width:40px; height:40px;
+    background-color:hsla(0,0%,100%,.85); border:1px solid var(--border-standard);
+    border-radius:50%; display:flex; align-items:center; justify-content:center;
+    color:var(--text-muted); cursor:pointer; z-index:1; transition:all .2s; font-size:1rem;
+}
+.wishlist-btn.active, .wishlist-btn:hover {
+    color:var(--highlight-cta); background-color:var(--bg-card);
+    transform:scale(1.1); box-shadow:var(--shadow-sm);
+}
+
+/* Package Card */
+.package-card { border:1px solid var(--border-standard); }
+.package-card.featured {
+    border: 3px solid var(--accent-natural); transform: scale(1.03);
+    box-shadow: var(--shadow-lg); background-color: var(--bg-main); position: relative;
+}
+.package-header { display:flex; justify-content:space-between; align-items:baseline; padding:var(--sp-4) var(--sp-5); border-bottom:1px solid var(--border-subtle); }
+.package-title { font-size:1.2rem; font-weight:600; }
+.package-price { font-size: 1.8rem; font-weight:700; color: var(--primary-brand); }
+.package-card.featured .package-price { color: var(--accent-natural-dark); }
+.package-features { list-style:none; padding:0; margin-bottom:var(--sp-4); flex-grow:1; }
+.package-features li { margin-bottom:var(--sp-2); font-size:.95rem; color:var(--text-muted); display:flex; align-items:flex-start; }
+.package-features li i.fa-check { color:var(--accent-natural); margin-right:var(--sp-2); margin-top:5px; font-size:.9em; }
+
+
+/* --- Form Elements --- */
+.form-group { margin-bottom:var(--sp-4); }
+.form-label { display:block; font-weight:500; margin-bottom:var(--sp-2); font-size:.9rem; color:var(--text-muted); }
+.form-control {
+    width:100%; padding:var(--sp-2) var(--sp-3); border:1px solid var(--border-standard);
+    border-radius:var(--radius-sm); font-size:1rem; transition:border-color .2s,box-shadow .2s;
+    background-color:var(--bg-card); line-height:1.5; box-shadow: inset 0 1px 2px rgba(0,0,0,0.05);
+}
+.form-control:focus {
+    outline:0; border-color:var(--accent-natural);
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.05), 0 0 0 3px var(--accent-natural-light);
+}
+.form-control.text-sm { font-size:.9rem; padding:var(--sp-2); }
+.form-control.text-xs { font-size:.85rem; padding:var(--sp-1) var(--sp-2); }
+textarea.form-control { min-height:100px; }
+
+.card-form { box-shadow:var(--shadow-lg); }
+.form-grid { display:grid; gap:var(--sp-6); }
+.form-aside { background-color:var(--bg-alt); padding:var(--sp-5); border-radius:var(--radius-lg); }
+.form-aside h4 { font-size:1.2rem; color:var(--primary-brand-dark); margin-bottom:var(--sp-2); }
+.form-aside hr { border:0; border-top:1px solid rgba(0,0,0,.08); margin:var(--sp-4) 0; }
+
+.time-slots { display:flex; flex-wrap:wrap; gap:var(--sp-2); margin-bottom:var(--sp-4); }
+.time-slot {
+    padding:var(--sp-2) var(--sp-3); border:1px solid var(--border-standard);
+    border-radius:var(--radius-sm); font-size:.9rem; cursor:pointer; transition:all .2s;
+    background-color:var(--bg-card);
+}
+.time-slot:hover { border-color:var(--accent-natural-light); background-color:var(--accent-natural-light); }
+.time-slot.selected { background-color:var(--accent-natural); color:var(--text-on-dark-bg); border-color:var(--accent-natural); }
+
+.radio-group label { display:flex; align-items:center; margin-bottom:var(--sp-2); font-size:.95rem; cursor:pointer; }
+.radio-group input[type=radio] { margin-right:var(--sp-2); transform:scale(1.1); }
+.group-purchase-option { background-color:var(--accent-natural-light); padding:var(--sp-4); border-radius:var(--radius-md); border-left:4px solid var(--accent-natural-dark); }
+.group-purchase-option label { font-weight:600; display:flex; align-items:center; margin-bottom:var(--sp-2); }
+.group-purchase-option input[type=checkbox] { margin-right:var(--sp-2); transform:scale(1.2); }
+.group-purchase-option p { color:var(--primary-brand-dark); margin-top:var(--sp-1); margin-bottom:0; font-size:.9rem; }
+
+.payment-methods { display:grid; grid-template-columns:repeat(auto-fit,minmax(130px,1fr)); gap:var(--sp-3); }
+.payment-method input[type=radio] { display:none; }
+.payment-method label {
+    display:flex; flex-direction:column; align-items:center; justify-content:center;
+    padding:var(--sp-3); border:1px solid var(--border-standard); border-radius:var(--radius-md);
+    cursor:pointer; transition:all .2s; text-align:center; font-size:.85rem; height:100%; min-height:90px;
+}
+.payment-method label img { height:30px; margin-bottom:var(--sp-2); }
+.payment-method label i { font-size:2rem; margin-bottom:var(--sp-2); color:var(--primary-brand); }
+.payment-method label:hover { border-color:var(--accent-natural); background-color:var(--accent-natural-light); }
+.payment-method input[type=radio]:checked+label, .payment-method.selected label {
+    border-color:var(--accent-natural-dark); background-color:var(--accent-natural); color:var(--text-on-dark-bg);
+}
+.payment-method input[type=radio]:checked+label i, .payment-method.selected label i { color:var(--text-on-dark-bg); }
+
+/* --- Buttons --- */
+.btn {
+    display:inline-flex; align-items:center; justify-content:center;
+    padding:var(--sp-3) var(--sp-5); font-weight:600; font-size:1rem;
+    border-radius:var(--radius-md); border:2px solid transparent; cursor:pointer;
+    transition:all .2s ease-out; white-space:nowrap; box-shadow: var(--shadow-sm);
+}
+.btn i { margin-right:var(--sp-2); }
+.btn:hover { transform:translateY(-3px) scale(1.02); box-shadow:var(--shadow-interactive); filter:brightness(1.05); }
+.btn:active { transform:translateY(-1px); filter:brightness(.95); box-shadow:var(--shadow-sm); }
+
+.btn-primary { background-color:var(--primary-brand); color:var(--text-on-dark-bg); border-color:var(--primary-brand); }
+.btn-primary:hover { background-color:var(--primary-brand-dark); border-color:var(--primary-brand-dark); }
+.btn-accent { background-color:var(--accent-natural); color:var(--text-on-dark-bg); border-color:var(--accent-natural); }
+.btn-accent:hover { background-color:var(--accent-natural-dark); border-color:var(--accent-natural-dark); }
+.btn-warning { background-color:var(--highlight-cta); color:var(--text-on-highlight); border-color:var(--highlight-cta); }
+.btn-warning:hover { background-color:var(--highlight-cta-dark); border-color:var(--highlight-cta-dark); }
+
+.btn-outline-primary { color:var(--primary-brand); border-color:var(--primary-brand); background-color:transparent; }
+.btn-outline-primary:hover { background-color:var(--primary-brand); color:var(--text-on-dark-bg); }
+.btn-outline-light { color:var(--text-on-dark-bg); border-color:var(--text-on-dark-bg); background-color:transparent; opacity: 0.9; }
+.btn-outline-light:hover { background-color:var(--text-on-dark-bg); color:var(--primary-brand-dark); opacity: 1; }
+
+.btn-lg { padding:var(--sp-4) var(--sp-5); font-size:1.1rem; }
+.btn-sm { padding:var(--sp-2) var(--sp-3); font-size:.9rem; }
+.btn-block { display:block; width:100%; }
+
+/* --- FAQ, Contact, Delivery Info Cards (Original CSS) --- */
+.faq-card { background-color:var(--bg-card); box-shadow:var(--shadow-sm); }
+.faq-card h4 { font-size:1.2rem; margin-bottom:var(--sp-1); }
+.faq-card p { font-size:.95rem; color:var(--text-muted); margin-bottom:0; }
+
+.contact-info-panel { background-color:var(--bg-alt); padding:var(--sp-6); border-radius:var(--radius-lg); }
+.contact-list { list-style:none; padding-left:0; }
+.contact-list li { display:flex; align-items:flex-start; gap:var(--sp-3); margin-bottom:var(--sp-4); }
+.contact-list li i { margin-top:5px; color:var(--primary-brand); font-size:1.2rem; }
+.social-links { display:flex; gap:var(--sp-4); margin-top:var(--sp-5); }
+.social-link {
+    width:40px; height:40px; background-color:rgba(0,0,0,.06); border-radius:50%;
+    color:var(--text-muted); font-size:1.1rem; display:inline-flex; align-items:center;
+    justify-content:center; transition:all .2s;
+}
+.social-link:hover { background-color:var(--primary-brand); color:var(--text-on-dark-bg); transform:translateY(-3px); }
+
+.delivery-info-card { background-color:var(--bg-card); padding:var(--sp-5); border-radius:var(--radius-lg); box-shadow:var(--shadow-sm); margin-bottom:var(--sp-4); }
+.delivery-info-card h3 { font-size:1.4rem; color:var(--primary-brand-dark); margin-bottom:var(--sp-3); }
+.delivery-info-card ul { list-style-type:disc; padding-left:var(--sp-4); font-size:.95rem; color:var(--text-muted); }
+.delivery-note { background-color:var(--primary-brand-light); padding:var(--sp-4); border-radius:var(--radius-md); font-size:.9rem; color:var(--primary-brand-dark); margin-top:var(--sp-4); border-left:4px solid var(--primary-brand); }
+
+/* --- Newsletter Section (Original CSS) --- */
+.newsletter-section { background-color:var(--primary-brand-light); padding:var(--sp-7) var(--sp-4); text-align:center; }
+.newsletter-section .container { max-width:750px; }
+.newsletter-section .fas.fa-newspaper { font-size:3rem; color:var(--primary-brand-dark); margin-bottom:var(--sp-4); }
+.newsletter-section h3 { color:var(--primary-brand-dark); font-size:clamp(1.6rem,4vw,2.2rem); }
+.newsletter-section p { color:var(--text-main); font-size:1.1rem; margin-bottom:var(--sp-5); max-width:600px; margin-left:auto; margin-right:auto; }
+.newsletter-form { display:flex; gap:var(--sp-2); max-width:550px; margin:0 auto; }
+.newsletter-form .form-control { text-align:left; padding:var(--sp-3) var(--sp-4); font-size:1rem; }
+
+
+/* --- Footer (Original CSS) --- */
+.footer {
+    background-color: var(--primary-brand-dark); color: rgba(255,255,255,0.75);
+    padding: var(--sp-7) 0 var(--sp-5); font-size:.95rem;
+}
+.footer-grid { display:grid; gap:var(--sp-6); grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); margin-bottom:var(--sp-6); }
+.footer-logo span { color:var(--text-on-dark-bg); }
+.footer-tagline { font-size:.9rem; opacity:.8; margin-top:var(--sp-2); line-height:1.6; }
+.footer-title { color: var(--text-on-dark-bg); font-weight:600; margin-bottom:var(--sp-4); font-size:1.3rem; }
+.footer-links { list-style:none; padding-left:0; }
+.footer-links li { margin-bottom:var(--sp-2); }
+.footer-links a { color:rgba(255,255,255,.75); transition:color .2s,padding-left .2s; }
+.footer-links a:hover { color:var(--text-on-dark-bg); padding-left:var(--sp-1); }
+.footer-contact { list-style:none; padding-left:0; }
+/* .footer-contact li { display:flex; align-items:center; gap:var(--sp-2); margin-bottom:var(--sp-3); } */ /* This was the original, if ul.footer-contact is empty, this can be removed or kept for future */
+.footer-contact i { color:var(--accent-natural-light); }
+.footer-contact a { color:rgba(255,255,255,.75); }
+.footer-contact a:hover { color:var(--text-on-dark-bg); }
+.footer-social { /* Style for the div containing social links in the footer */
+    display: flex;
+    gap: var(--sp-3); /* Slightly smaller gap for footer */
+    margin-top: var(--sp-3); /* Adjusted margin if ul.footer-contact is gone */
+}
+.footer-social i { font-size:1.2rem; } /* Original icon size */
+.footer-social .social-link { /* Reuse .social-link style but ensure it works in footer context */
+    width:36px; height:36px; /* Slightly smaller for footer */
+    background-color:rgba(255,255,255,.1);
+    color:rgba(255,255,255,.6);
+}
+.footer-social .social-link:hover {
+    background-color:var(--accent-natural-light);
+    color:var(--primary-brand-dark);
+}
+
+.footer-bottom {
+    text-align:center; padding-top:var(--sp-5); border-top:1px solid var(--primary-brand);
+    display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:var(--sp-3);
+}
+.payment-icons { display:flex; gap:var(--sp-2); align-items:center; }
+.payment-icons img { height:28px; opacity:.7; filter:grayscale(50%) brightness(1.1); transition:opacity .2s, filter .2s; }
+.payment-icons img:hover { opacity:1; filter:none; }
+
+/* --- FAB Buttons --- */
+.fab {
+    position:fixed; width:60px; height:60px; border-radius:50%;
+    color:var(--text-on-dark-bg); border:none; box-shadow:var(--shadow-md); cursor:pointer;
+    display:flex; align-items:center; justify-content:center; z-index:999;
+    transition:transform .2s,opacity .2s; font-size:1.8rem;
+}
+.fab:hover { transform:scale(1.1) translateY(-4px); opacity:1; }
+.fab-whatsapp { bottom:var(--sp-5); right:var(--sp-5); background-color:#25D366; }
+
+/* --- Bilingual --- */
+.bi-ling { display: flex; justify-content: space-between; gap: var(--sp-4); align-items: flex-start; }
+.bi-ling > .ar, .bi-ling > .en { flex: 1 1 48%; min-width: 0; }
+.bi-ling .ar { font-family: var(--font-ar); direction: rtl; text-align: right; }
+.bi-ling-compact { display: inline-flex; align-items: baseline; gap: var(--sp-1); }
+.bi-ling-compact .ar { font-family: var(--font-ar); direction: rtl; }
+.styled-list .bi-ling { gap:var(--sp-1); } 
+.package-features .bi-ling { gap:var(--sp-1); } 
+.section-header .bi-ling { max-width:none; } 
+.section-header .bi-ling .en, .section-header .bi-ling .ar { max-width: 100%; } 
+.contact-list .bi-ling { gap: var(--sp-1); }
+
+
+/* --- Utility Classes --- */
+.text-muted { color: var(--text-muted); }
+.text-sm { font-size: .9rem; }
+.text-xs { font-size: .8rem; } 
+.text-center { text-align: center; }
+.mb-0{margin-bottom:0!important}.mb-1{margin-bottom:var(--sp-1)!important}.mb-2{margin-bottom:var(--sp-2)!important}.mb-3{margin-bottom:var(--sp-3)!important}.mb-4{margin-bottom:var(--sp-4)!important}.mb-5{margin-bottom:var(--sp-5)!important}
+.mt-1{margin-top:var(--sp-1)!important}.mt-2{margin-top:var(--sp-2)!important}.mt-3{margin-top:var(--sp-3)!important}.mt-4{margin-top:var(--sp-4)!important}.mt-lg{margin-top:var(--sp-7)!important}.mt-xl{margin-top:var(--sp-8)!important}
+.fw-bold{font-weight:700}.fw-medium{font-weight:500}
+
+
+/* --- Responsive Adjustments --- */
+@media (min-width: 769px) {
+    .nav-menu { display: flex; }
+    .mobile-toggle { display: none; }
+    .form-grid { grid-template-columns: 2fr 1fr; }
+}
+
+@media (max-width: 1024px) {
+    .grid-cols-4 { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+    .bi-ling:not(.hero .bi-ling):not(.section-header .bi-ling):not(.logo .bi-ling-compact):not(.nav-link .bi-ling-compact):not(.btn .bi-ling-compact):not(.badge .bi-ling-compact):not(.package-price .bi-ling-compact):not(.card-price .bi-ling-compact):not(.form-label .bi-ling-compact):not(.radio-group label .bi-ling-compact):not(.payment-method label .bi-ling-compact):not(.footer .bi-ling-compact):not(.contact-list .bi-ling) {
+        flex-direction: column; gap: var(--sp-2); align-items: stretch;
+    }
+    .bi-ling:not(.hero .bi-ling):not(.section-header .bi-ling):not(.logo .bi-ling-compact):not(.nav-link .bi-ling-compact):not(.btn .bi-ling-compact):not(.badge .bi-ling-compact):not(.package-price .bi-ling-compact):not(.card-price .bi-ling-compact):not(.form-label .bi-ling-compact):not(.radio-group label .bi-ling-compact):not(.payment-method label .bi-ling-compact):not(.footer .bi-ling-compact):not(.contact-list .bi-ling) > .ar, 
+    .bi-ling:not(.hero .bi-ling):not(.section-header .bi-ling):not(.logo .bi-ling-compact):not(.nav-link .bi-ling-compact):not(.btn .bi-ling-compact):not(.badge .bi-ling-compact):not(.package-price .bi-ling-compact):not(.card-price .bi-ling-compact):not(.form-label .bi-ling-compact):not(.radio-group label .bi-ling-compact):not(.payment-method label .bi-ling-compact):not(.footer .bi-ling-compact):not(.contact-list .bi-ling) > .en {
+        flex-basis: auto !important; text-align: left !important;
+    }
+    .bi-ling:not(.hero .bi-ling):not(.section-header .bi-ling):not(.logo .bi-ling-compact):not(.nav-link .bi-ling-compact):not(.btn .bi-ling-compact):not(.badge .bi-ling-compact):not(.package-price .bi-ling-compact):not(.card-price .bi-ling-compact):not(.form-label .bi-ling-compact):not(.radio-group label .bi-ling-compact):not(.payment-method label .bi-ling-compact):not(.footer .bi-ling-compact):not(.contact-list .bi-ling) .ar {
+        text-align: right !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .container { padding-left: var(--sp-3); padding-right: var(--sp-3); }
+    h1 { font-size: clamp(2rem,5vw,2.6rem); }
+    .grid-cols-2, .grid-cols-3, .grid-cols-4 { grid-template-columns: 1fr; }
+
+    .header { padding: var(--sp-2) 0; }
+    .logo img { height: 40px; }
+    .nav-menu {
+        display: none; flex-direction: column; position: absolute;
+        top: 100%; left: 0; right: 0; background-color: var(--bg-card);
+        box-shadow: var(--shadow-md); padding: var(--sp-3);
+        border-top: 1px solid var(--border-subtle);
+    }
+    .nav-menu.active { display: flex; }
+    .nav-menu .nav-link { padding:var(--sp-3); width:100%; justify-content:flex-start; }
+    .nav-menu .nav-link:hover, .nav-menu .nav-link.active {
+        background-color: var(--accent-natural-light);
+        color: var(--accent-natural-dark);
+    }
+    .nav-item.dropdown .dropdown-menu {
+        position:static; box-shadow:none; border:none; padding-left:var(--sp-4);
+        background-color:var(--bg-alt); border-radius:0; min-width:auto;
+    }
+    .nav-item.dropdown.open .dropdown-toggle::after { transform:rotate(180deg); }
+
+    .hero { text-align:center; min-height:70vh; }
+    .hero .bi-ling { flex-direction:column; align-items:center; gap:var(--sp-2); }
+    .hero .bi-ling .en, .hero .bi-ling .ar { text-align:center!important; }
+    .hero-overlay { background: linear-gradient(0deg, rgba(var(--primary-brand-rgb),0.75) 0%, rgba(var(--primary-brand-rgb),0.3) 60%, rgba(var(--primary-brand-rgb),0) 100%); }
+    .hero-content { margin-left:auto; margin-right:auto; }
+    .hero-actions { justify-content:center; }
+
+    .promo-banner { flex-direction: column; text-align: center; gap: var(--sp-4); }
+    .promo-banner .bi-ling { align-items:center; }
+    
+    .footer-grid { grid-template-columns:1fr; text-align:center; }
+    .footer-grid > div { margin-bottom:var(--sp-4); }
+    .footer-social, .social-links { justify-content:center; }
+    .footer-bottom { flex-direction:column; gap:var(--sp-4); }
+    
+    .form-grid { grid-template-columns:1fr; }
+    .form-aside { margin-top:var(--sp-5); }
+    .payment-methods { grid-template-columns:repeat(auto-fit,minmax(100px,1fr)); }
+    .newsletter-form { flex-direction:column; }
+
+    .bi-ling:not(.logo .bi-ling-compact):not(.nav-link .bi-ling-compact):not(.btn .bi-ling-compact):not(.badge .bi-ling-compact):not(.package-price .bi-ling-compact):not(.card-price .bi-ling-compact):not(.form-label .bi-ling-compact):not(.radio-group label .bi-ling-compact):not(.payment-method label .bi-ling-compact):not(.footer .bi-ling-compact):not(.hero .bi-ling):not(.section-header .bi-ling):not(.contact-list .bi-ling){
+        flex-direction: column; gap: var(--sp-2); align-items: stretch;
+    }
+     .bi-ling:not(.logo .bi-ling-compact):not(.nav-link .bi-ling-compact):not(.btn .bi-ling-compact):not(.badge .bi-ling-compact):not(.package-price .bi-ling-compact):not(.card-price .bi-ling-compact):not(.form-label .bi-ling-compact):not(.radio-group label .bi-ling-compact):not(.payment-method label .bi-ling-compact):not(.footer .bi-ling-compact):not(.hero .bi-ling):not(.section-header .bi-ling):not(.contact-list .bi-ling) > .ar,
+     .bi-ling:not(.logo .bi-ling-compact):not(.nav-link .bi-ling-compact):not(.btn .bi-ling-compact):not(.badge .bi-ling-compact):not(.package-price .bi-ling-compact):not(.card-price .bi-ling-compact):not(.form-label .bi-ling-compact):not(.radio-group label .bi-ling-compact):not(.payment-method label .bi-ling-compact):not(.footer .bi-ling-compact):not(.hero .bi-ling):not(.section-header .bi-ling):not(.contact-list .bi-ling) > .en {
+        flex-basis: auto !important; text-align: left !important;
+    }
+     .bi-ling:not(.logo .bi-ling-compact):not(.nav-link .bi-ling-compact):not(.btn .bi-ling-compact):not(.badge .bi-ling-compact):not(.package-price .bi-ling-compact):not(.card-price .bi-ling-compact):not(.form-label .bi-ling-compact):not(.radio-group label .bi-ling-compact):not(.payment-method label .bi-ling-compact):not(.footer .bi-ling-compact):not(.hero .bi-ling):not(.section-header .bi-ling):not(.contact-list .bi-ling) .ar {
+        text-align: right !important;
+    }
+    .section-header .bi-ling .en, .section-header .bi-ling .ar { max-width:100%; text-align:center!important; }
+    .contact-list .bi-ling { text-align:left!important; } 
+    .contact-list .bi-ling .ar { text-align:right!important; } 
+}
+</style>
+<body>
+    <header class="header">
+        <div class="container main-header">
+            <a href="#home" class="logo">
+                <img src="https://placehold.co/60x60/5D4037/FAF8F5?text=SL&font=Inter" alt="Sheep Land Logo">
+            </a>
+            <nav>
+                <ul id="mainNavMenu" class="nav-menu">
+                    <li><a href="#home" class="nav-link active"><i class="fas fa-home"></i><span class="bi-ling-compact"><span class="en">Home</span><span class="ar">الرئيسية</span></span></a></li>
+                    <li class="nav-item dropdown">
+                        <a href="#livestock" class="nav-link dropdown-toggle"><i class="fas fa-sheep"></i><span class="bi-ling-compact"><span class="en">Livestock</span><span class="ar">المواشي</span></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#awassi" class="dropdown-item"><span class="bi-ling-compact"><span class="en">Awassi Sheep</span><span class="ar">خروف عواسي</span></span></a></li>
+                            <li><a href="#barki" class="dropdown-item"><span class="bi-ling-compact"><span class="en">Barki Sheep</span><span class="ar">خروف برقي</span></span></a></li>
+                            <li><a href="#breed-guide" class="dropdown-item"><span class="bi-ling-compact"><span class="en">Breed Guide</span><span class="ar">دليل السلالات</span></span></a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#meat" class="nav-link dropdown-toggle"><i class="fas fa-drumstick-bite"></i><span class="bi-ling-compact"><span class="en">Meat</span><span class="ar">اللحوم</span></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#lamb-cuts" class="dropdown-item"><span class="bi-ling-compact"><span class="en">Lamb Cuts</span><span class="ar">قطعيات الخروف</span></span></a></li>
+                            <li><a href="#mutton" class="dropdown-item"><span class="bi-ling-compact"><span class="en">Mutton</span><span class="ar">لحم الضأن</span></span></a></li>
+                            <li><a href="#special-cuts-info" class="dropdown-item"><span class="bi-ling-compact"><span class="en">Special Cuts</span><span class="ar">قطعيات خاصة</span></span></a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#udheya" class="nav-link"><i class="fas fa-hand-holding-heart"></i><span class="bi-ling-compact"><span class="en">Udheya</span><span class="ar">الأضحية</span></span></a></li>
+                    <li class="nav-item dropdown">
+                        <a href="#support" class="nav-link dropdown-toggle"><i class="fas fa-info-circle"></i><span class="bi-ling-compact"><span class="en">Support</span><span class="ar">الدعم</span></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#faq" class="dropdown-item"><span class="bi-ling-compact"><span class="en">FAQ</span><span class="ar">الأسئلة</span></span></a></li>
+                            <li><a href="#delivery-info" class="dropdown-item"><span class="bi-ling-compact"><span class="en">Delivery</span><span class="ar">التوصيل</span></span></a></li>
+                            <li><a href="#contact" class="dropdown-item"><span class="bi-ling-compact"><span class="en">Contact</span><span class="ar">اتصل بنا</span></span></a></li> 
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <div class="nav-tools">
+                <select class="currency-select" aria-label="Currency Selection | اختيار العملة">
+                    <option value="USD">$ USD</option>
+                    <option value="EGP">LE EGP</option>
+                    <option value="EUR">€ EUR</option>
+                </select>
+                <a href="#search" class="nav-tool" title="Search | بحث" aria-label="Search | بحث"><i class="fas fa-search"></i></a>
+                <a href="#account" class="nav-tool" title="My Account | حسابي" aria-label="My Account | حسابي"><i class="fas fa-user-circle"></i></a>
+                <a href="#wishlist" class="nav-tool" title="Wishlist | المفضلة" aria-label="Wishlist | المفضلة"><i class="fas fa-heart"></i><span class="tool-count">3</span></a>
+                <a href="#cart" class="nav-tool" title="Cart | سلة التسوق" aria-label="Cart | سلة التسوق"><i class="fas fa-shopping-bag"></i><span class="tool-count">2</span></a>
+                <button id="mobileMenuToggle" class="mobile-toggle" aria-label="Toggle navigation" aria-expanded="false"><i class="fas fa-bars"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <img src="https://placehold.co/1920x1152/5D4037/FAF8F5?text=Pasture+View&font=Inter" class="hero-bg" alt="Flock of sheep in a lush green pasture at sunset">
+            <div class="hero-overlay"></div>
+            <div class="container">
+                <div class="hero-content">
+                    <div class="bi-ling">
+                        <div class="en">
+                            <h1 class="hero-title">Finest Quality Sheep & Halal Meat,<br>Farm to Table</h1>
+                            <p class="hero-text">Experience the tradition of excellence with our ethically raised Awassi & Barki sheep. Fresh, expertly prepared halal meat and dedicated Udheya services delivered with care.</p>
+                        </div>
+                        <div class="ar">
+                            <h1 class="hero-title">أجود أنواع الأغنام واللحوم الحلال،<br>من المزرعة إلى مائدتك</h1>
+                            <p class="hero-text">عِش تقاليد التميز مع أغنام العواسي والبرقي المرباة أخلاقياً. لحوم حلال طازجة ومحضرة بخبرة، وخدمات أضحية متفانية تصلك بعناية.</p>
+                        </div>
+                    </div>
+                    <div class="hero-actions">
+                        <a href="#udheya" class="btn btn-accent btn-lg"><i class="fas fa-hand-holding-heart"></i><span class="bi-ling-compact"><span class="en">Reserve Udheya</span><span class="ar">حجز الأضحية</span></span></a>
+                        <a href="#livestock" class="btn btn-outline-light btn-lg"><i class="fas fa-store"></i><span class="bi-ling-compact"><span class="en">Explore Our Range</span><span class="ar">تصفح منتجاتنا</span></span></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section promo-section">
+            <div class="container">
+                <div class="promo-banner">
+                    <div class="promo-banner-content">
+                        <i class="fas fa-calendar-alt fa-2x"></i>
+                        <div class="bi-ling">
+                            <div class="en">
+                                <h3 class="text-md fw-bold mb-0">Eid Al-Adha is Coming!</h3>
+                                <p class="text-sm">Only <strong>45 days</strong> left. Book your Udheya early & get <span>15% Discount!</span></p>
+                            </div>
+                            <div class="ar">
+                                <h3 class="text-md fw-bold mb-0"> عيد الأضحى يقترب!</h3>
+                                <p class="text-sm">متبقي <strong>45</strong> يومًا فقط. احجز أضحيتك مبكرًا واحصل على <span>خصم 15%!</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#udheya" class="btn btn-warning btn-lg"><span class="bi-ling-compact"><span class="en">Reserve Now</span><span class="ar">احجز الآن</span></span></a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-alt commitment-section">
+            <div class="container">
+                <div class="section-header">
+                    <div class="bi-ling"><div class="en"><h2 class="section-title">Our Commitment to Excellence</h2><p class="section-subtitle">Delivering unparalleled quality and service, rooted in tradition and trust.</p></div><div class="ar"><h2 class="section-title">التزامنا بالتميز</h2><p class="section-subtitle">نقدم جودة وخدمة لا مثيل لهما، متجذرة في التقاليد والثقة.</p></div></div>
+                </div>
+                <div class="grid grid-cols-4 features-grid">
+                    <div class="feature-item"><div class="feature-icon-wrapper"><i class="fas fa-medal"></i></div><div class="bi-ling"><div class="en"><h4 class="feature-title">Premium Quality</h4><p class="feature-text">Only the healthiest livestock and finest cuts, sourced with care.</p></div><div class="ar"><h4 class="feature-title">جودة ممتازة</h4><p class="feature-text">أفضل المواشي وأجود القطعيات، مختارة بعناية فائقة.</p></div></div></div>
+                    <div class="feature-item"><div class="feature-icon-wrapper"><i class="fas fa-mosque"></i></div><div class="bi-ling"><div class="en"><h4 class="feature-title">100% Halal Certified</h4><p class="feature-text">All processes adhere strictly to Islamic principles.</p></div><div class="ar"><h4 class="feature-title">حلال معتمد 100%</h4><p class="feature-text">جميع عملياتنا تتبع المبادئ الإسلامية بدقة.</p></div></div></div>
+                    <div class="feature-item"><div class="feature-icon-wrapper"><i class="fas fa-truck-fast"></i></div><div class="bi-ling"><div class="en"><h4 class="feature-title">Swift & Reliable Delivery</h4><p class="feature-text">Freshness guaranteed, delivered promptly to your doorstep.</p></div><div class="ar"><h4 class="feature-title">توصيل سريع وموثوق</h4><p class="feature-text">نضارة مضمونة، تصلك بسرعة إلى باب منزلك.</p></div></div></div>
+                    <div class="feature-item"><div class="feature-icon-wrapper"><i class="fas fa-headset"></i></div><div class="bi-ling"><div class="en"><h4 class="feature-title">Dedicated Support</h4><p class="feature-text">Our knowledgeable team is always here to assist you.</p></div><div class="ar"><h4 class="feature-title">دعم متخصص</h4><p class="feature-text">فريقنا الخبير جاهز دائمًا لتقديم المساعدة.</p></div></div></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="livestock" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <div class="bi-ling"><div class="en"><h2 class="section-title">Our Esteemed Livestock</h2><p class="section-subtitle">Handpicked Awassi and Barki sheep, raised for superior quality.</p></div><div class="ar"><h2 class="section-title">مواشينا المتميزة</h2><p class="section-subtitle">أغنام عواسي وبرقي منتقاة بعناية، مرباة لجودة فائقة.</p></div></div>
+                </div>
+                <div class="grid grid-cols-2 gap-lg">
+                    <div id="awassi" class="card product-card">
+                        <div class="card-img-wrapper"><img src="https://placehold.co/600x420/D7CCC8/3E2723?text=Awassi+Sheep&font=Inter" alt="Awassi Sheep"><div class="badge badge-breed"><span class="bi-ling-compact"><span class="en">AWASSI</span><span class="ar">عواسي</span></span></div><button class="wishlist-btn active" title="Add to wishlist"><i class="fas fa-heart"></i></button></div>
+                        <div class="card-body">
+                            <div class="bi-ling"><div class="en"><h3 class="card-title">Prime Awassi Sheep</h3><p class="card-text">Renowned local breed, celebrated for its rich flavor and adaptability. Ideal for traditional feasts and Udheya.</p></div><div class="ar"><h3 class="card-title">خروف عواسي فاخر</h3><p class="card-text">سلالة محلية شهيرة، معروفة بنكهتها الغنية وقدرتها على التكيف. مثالية للمآدب التقليدية والأضحية.</p></div></div>
+                            <div class="card-price">$349.99</div>
+                            <div class="card-actions">
+                                <select class="form-control text-sm" aria-label="Select Weight for Awassi Sheep">
+                                    <option value=""><span class="bi-ling-compact"><span class="en">Select Weight</span><span class="ar">اختر الوزن</span></span></option>
+                                    <option value="30-40">30-40 kg</option>
+                                    <option value="40-50">40-50 kg</option>
+                                    <option value="50+">50+ kg</option>
+                                </select>
+                                <button class="btn btn-primary"><i class="fas fa-cart-plus"></i><span class="bi-ling-compact"><span class="en">Add</span><span class="ar">أضف</span></span></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="barki" class="card product-card">
+                        <div class="card-img-wrapper"><img src="https://placehold.co/600x420/EFEBE9/4E342E?text=Barki+Sheep&font=Inter" alt="Barki Sheep"><div class="badge badge-breed"><span class="bi-ling-compact"><span class="en">BARKI</span><span class="ar">برقي</span></span></div><button class="wishlist-btn" title="Add to wishlist"><i class="far fa-heart"></i></button></div>
+                        <div class="card-body">
+                            <div class="bi-ling"><div class="en"><h3 class="card-title">Choice Barki Sheep</h3><p class="card-text">Hardy desert breed, prized for its lean, flavorful meat. A connoisseur's choice for a distinct taste experience.</p></div><div class="ar"><h3 class="card-title">خروف برقي مختار</h3><p class="card-text">سلالة صحراوية قوية، تُقدر بلحمها قليل الدهن ونكهتها المميزة. اختيار الذواقة لتجربة طعم فريدة.</p></div></div>
+                            <div class="card-price">$329.99</div>
+                            <div class="card-actions">
+                                <select class="form-control text-sm" aria-label="Select Weight for Barki Sheep">
+                                    <option value=""><span class="bi-ling-compact"><span class="en">Select Weight</span><span class="ar">اختر الوزن</span></span></option>
+                                    <option value="30-40">30-40 kg</option>
+                                    <option value="40-50">40-50 kg</option>
+                                    <option value="50+">50+ kg</option>
+                                </select>
+                                <button class="btn btn-primary"><i class="fas fa-cart-plus"></i><span class="bi-ling-compact"><span class="en">Add</span><span class="ar">أضف</span></span></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="breed-guide" class="card card-info mt-lg">
+                    <div class="card-body">
+                        <h3 class="card-title text-center mb-md"><span class="bi-ling-compact"><span class="en">Understanding Our Breeds</span><span class="ar">فهم سلالاتنا</span></span></h3>
+                        <div class="grid grid-cols-2 gap-md">
+                            <div class="bi-ling">
+                                <div class="en"><h4>The Esteemed Awassi</h4><p>A cornerstone of Middle Eastern livestock, the Awassi is a fat-tailed sheep renowned for its resilience and dual-purpose qualities. Its meat is tender with a characteristic flavor profile, and its fat tail is a delicacy in many traditional dishes.</p><ul class="styled-list"><li>Excellent heat and drought tolerance.</li><li>Good milk producer (though we focus on meat).</li><li>Prized for rich, flavorful meat and fat.</li></ul></div>
+                                <div class="ar"><h4>العواسي الموقر</h4><p>يعتبر العواسي حجر الزاوية في الثروة الحيوانية في الشرق الأوسط، وهو خروف ذو ذيل دهني يشتهر بمرونته وصفاته المزدوجة الغرض. لحمه طري ذو نكهة مميزة، ويعتبر ذيله الدهني من الأطعمة الشهية في العديد من الأطباق التقليدية.</p><ul class="styled-list"><li>قدرة ممتازة على تحمل الحرارة والجفاف.</li><li>منتج جيد للحليب (على الرغم من تركيزنا على اللحوم).</li><li>مُقدر للحمه الغني بالنكهة ودهنه.</li></ul></div>
+                            </div>
+                            <div class="bi-ling">
+                                <div class="en"><h4>The Resilient Barki</h4><p>Hailing from the arid western deserts of Egypt, the Barki sheep is a testament to survival and quality. This breed offers leaner meat compared to the Awassi, with a uniquely rich and gamey flavor that is highly sought after.</p><ul class="styled-list"><li>Exceptional adaptation to harsh, arid environments.</li><li>Leaner meat with a distinctive, robust flavor.</li><li>Known for its strong constitution and disease resistance.</li></ul></div>
+                                <div class="ar"><h4>البرقي الصامد</h4><p>ينحدر خروف البرقي من الصحاري الغربية القاحلة في مصر، وهو شهادة على البقاء والجودة. تقدم هذه السلالة لحمًا أقل دهونًا مقارنة بالعواسي، مع نكهة غنية وفريدة من نوعها مرغوبة للغاية.</p><ul class="styled-list"><li>تكيف استثنائي مع البيئات القاسية والجافة.</li><li>لحم أقل دهونًا بنكهة قوية ومميزة.</li><li>معروف ببنيته القوية ومقاومته للأمراض.</li></ul></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="farm-conditions" class="card card-info mt-lg">
+                    <div class="card-body">
+                        <h3 class="card-title text-center mb-md"><span class="bi-ling-compact"><span class="en">Our Pledge to Animal Welfare & Quality Farming</span><span class="ar">تعهدنا برعاية الحيوان والزراعة عالية الجودة</span></span></h3>
+                        <div class="grid grid-cols-2 gap-md align-items-center">
+                            <div><img src="https://placehold.co/1200x720/A3B18A/212529?text=Well-Cared+For+Sheep&font=Inter" alt="Well-cared for sheep on a sunny farm" class="img-fluid rounded"></div>
+                            <div>
+                                <div class="bi-ling">
+                                    <div class="en"><p>At Sheep Land, we believe that exceptional meat comes from exceptionally cared-for animals. Our farms provide:</p><ul class="styled-list"><li>Spacious, natural pastures for free-range grazing.</li><li>Constant access to fresh, clean water and balanced, natural feed.</li><li>Proactive veterinary care and continuous health monitoring.</li><li>A tranquil, stress-free environment promoting natural behaviors.</li><li>Unwavering commitment to ethical and humane treatment at every stage.</li></ul></div>
+                                    <div class="ar"><p>في أرض الأغنام، نؤمن بأن اللحوم الاستثنائية تأتي من حيوانات تتم رعايتها بشكل استثنائي. توفر مزارعنا:</p><ul class="styled-list"><li>مراعي طبيعية واسعة للرعي الحر.</li><li>وصول دائم إلى مياه عذبة ونظيفة وأعلاف طبيعية متوازنة.</li><li>رعاية بيطرية استباقية ومراقبة صحية مستمرة.</li><li>بيئة هادئة وخالية من الإجهاد تعزز السلوكيات الطبيعية.</li><li>التزام ثابت بالمعاملة الأخلاقية والإنسانية في كل مرحلة.</li></ul></div>
+                                </div>
+                                <a href="#contact" class="btn btn-outline-primary mt-md"><i class="fas fa-map-marked-alt"></i><span class="bi-ling-compact"><span class="en">Arrange a Farm Visit</span><span class="ar">ترتيب زيارة للمزرعة</span></span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="meat" class="section section-alt">
+            <div class="container">
+                <div class="section-header">
+                    <div class="bi-ling"><div class="en"><h2 class="section-title">Artisan Halal Meat Cuts</h2><p class="section-subtitle">Expertly prepared, from prime lamb to flavorful mutton.</p></div><div class="ar"><h2 class="section-title">قطعيات لحوم حلال حرفية</h2><p class="section-subtitle">محضرة بخبرة، من أجود أنواع لحم الحمل إلى لحم الضأن الغني بالنكهة.</p></div></div>
+                </div>
+                <div class="grid grid-cols-4 gap-md" id="lamb-cuts">
+                    <div class="card product-card">
+                        <div class="card-img-wrapper"><img src="https://placehold.co/400x280/A3B18A/212529?text=Lamb+Leg&font=Inter" alt="Lamb Leg"><div class="badge badge-halal"><span class="bi-ling-compact"><span class="en">HALAL</span><span class="ar">حلال</span></span></div><button class="wishlist-btn" title="Add to wishlist"><i class="far fa-heart"></i></button></div>
+                        <div class="card-body">
+                            <div class="bi-ling"><div class="en"><h4 class="card-title">Prime Lamb Leg</h4><p class="card-text text-sm">A classic roast, tender and succulent. Perfect for family gatherings.</p></div><div class="ar"><h4 class="card-title">فخذ خروف فاخر</h4><p class="card-text text-sm">شواء كلاسيكي، طري وشهي. مثالي للتجمعات العائلية.</p></div></div>
+                            <div class="card-price">$18.99/kg</div>
+                            <div class="card-actions">
+                                <select class="form-control text-xs" aria-label="Select weight for Prime Lamb Leg">
+                                    <option value="1">1 kg</option> <option value="1.5">1.5 kg</option> <option value="2">2 kg</option>
+                                </select>
+                                <button class="btn btn-accent btn-sm"><i class="fas fa-cart-plus"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card product-card">
+                        <div class="card-img-wrapper"><img src="https://placehold.co/400x280/A3B18A/212529?text=Lamb+Chops&font=Inter" alt="Lamb Chops"><div class="badge badge-sale"><span class="bi-ling-compact"><span class="en">SALE</span><span class="ar">تخفيض</span></span></div><button class="wishlist-btn active" title="Add to wishlist"><i class="fas fa-heart"></i></button></div>
+                        <div class="card-body">
+                            <div class="bi-ling"><div class="en"><h4 class="card-title">Tender Lamb Chops</h4><p class="card-text text-sm">Flavorful and quick to cook. Ideal for grilling or pan-frying.</p></div><div class="ar"><h4 class="card-title">ريش خروف طرية</h4><p class="card-text text-sm">غنية بالنكهة وسريعة الطهي. مثالية للشواء أو القلي.</p></div></div>
+                            <div class="card-price">$22.99/kg</div>
+                            <div class="card-actions">
+                                <select class="form-control text-xs" aria-label="Select weight for Tender Lamb Chops">
+                                    <option value="0.5">500g</option><option value="1">1 kg</option>
+                                </select>
+                                <button class="btn btn-accent btn-sm"><i class="fas fa-cart-plus"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card product-card">
+                         <div class="card-img-wrapper"><img src="https://placehold.co/400x280/A3B18A/212529?text=Lamb+Shoulder&font=Inter" alt="Lamb Shoulder"><div class="badge badge-halal"><span class="bi-ling-compact"><span class="en">HALAL</span><span class="ar">حلال</span></span></div><button class="wishlist-btn"><i class="far fa-heart"></i></button></div>
+                        <div class="card-body">
+                            <div class="bi-ling"><div class="en"><h4 class="card-title">Slow-Cook Lamb Shoulder</h4><p class="card-text text-sm">Rich in flavor, perfect for slow roasting or braising until fall-apart tender.</p></div><div class="ar"><h4 class="card-title">كتف خروف للطهي البطيء</h4><p class="card-text text-sm">غني بالنكهة، مثالي للشواء البطيء أو التسبيك حتى يذوب في الفم.</p></div></div>
+                            <div class="card-price">$16.99/kg</div>
+                            <div class="card-actions">
+                                <select class="form-control text-xs" aria-label="Select weight for Slow-Cook Lamb Shoulder">
+                                    <option value="1.5">1.5 kg</option><option value="2.5">2.5 kg</option>
+                                </select>
+                                <button class="btn btn-accent btn-sm"><i class="fas fa-cart-plus"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card product-card" id="mutton">
+                        <div class="card-img-wrapper"><img src="https://placehold.co/400x280/A3B18A/212529?text=Ground+Lamb&font=Inter" alt="Ground Lamb"><div class="badge badge-halal"><span class="bi-ling-compact"><span class="en">HALAL</span><span class="ar">حلال</span></span></div><button class="wishlist-btn"><i class="far fa-heart"></i></button></div>
+                        <div class="card-body">
+                            <div class="bi-ling"><div class="en"><h4 class="card-title">Versatile Ground Lamb</h4><p class="card-text text-sm">Perfect for kebabs, burgers, moussaka, and countless other dishes.</p></div><div class="ar"><h4 class="card-title">لحم خروف مفروم متعدد الاستخدامات</h4><p class="card-text text-sm">مثالي للكباب والبرجر والمسقعة وأطباق لا حصر لها.</p></div></div>
+                            <div class="card-price">$14.99/kg</div>
+                            <div class="card-actions">
+                                <select class="form-control text-xs" aria-label="Select weight for Ground Lamb">
+                                    <option value="0.5">500g</option><option value="1">1 kg</option><option value="1.5">1.5 kg</option>
+                                </select>
+                                <button class="btn btn-accent btn-sm"><i class="fas fa-cart-plus"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card product-card">
+                        <div class="card-img-wrapper"><img src="https://placehold.co/400x280/A3B18A/212529?text=Lamb+Rack&font=Inter" alt="Lamb Rack"><div class="badge badge-halal"><span class="bi-ling-compact"><span class="en">HALAL</span><span class="ar">حلال</span></span></div><button class="wishlist-btn" title="Add to wishlist"><i class="far fa-heart"></i></button></div>
+                        <div class="card-body">
+                            <div class="bi-ling"><div class="en"><h4 class="card-title">Frenched Rack of Lamb</h4><p class="card-text text-sm">An elegant centerpiece, offering tender, juicy meat. Impress your guests.</p></div><div class="ar"><h4 class="card-title">ضلوع خروف (راك فرنسي)</h4><p class="card-text text-sm">قطعة مركزية أنيقة، تقدم لحمًا طريًا وشهيًا. أبهر ضيوفك.</p></div></div>
+                            <div class="card-price">$28.99/kg</div>
+                            <div class="card-actions">
+                                <select class="form-control text-xs" aria-label="Select weight for Frenched Rack of Lamb">
+                                    <option value="0.8">Approx. 0.8 kg</option>
+                                    <option value="1.2">Approx. 1.2 kg</option>
+                                </select>
+                                <button class="btn btn-accent btn-sm"><i class="fas fa-cart-plus"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card product-card">
+                        <div class="card-img-wrapper"><img src="https://placehold.co/400x280/A3B18A/212529?text=Lamb+Shank&font=Inter" alt="Lamb Shank"><div class="badge badge-halal"><span class="bi-ling-compact"><span class="en">HALAL</span><span class="ar">حلال</span></span></div><button class="wishlist-btn" title="Add to wishlist"><i class="far fa-heart"></i></button></div>
+                        <div class="card-body">
+                            <div class="bi-ling"><div class="en"><h4 class="card-title">Hearty Lamb Shanks</h4><p class="card-text text-sm">Ideal for slow-braising, resulting in incredibly tender, flavorful meat.</p></div><div class="ar"><h4 class="card-title">موزات خروف شهية</h4><p class="card-text text-sm">مثالية للطهي البطيء، ينتج عنها لحم طري وغني بالنكهة بشكل لا يصدق.</p></div></div>
+                            <div class="card-price">$15.99/kg</div>
+                            <div class="card-actions">
+                                <select class="form-control text-xs" aria-label="Select quantity for Lamb Shanks">
+                                    <option value="2pcs_1kg">2 Pieces (Approx. 1kg)</option>
+                                    <option value="4pcs_2kg">4 Pieces (Approx. 2kg)</option>
+                                </select>
+                                <button class="btn btn-accent btn-sm"><i class="fas fa-cart-plus"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card product-card">
+                        <div class="card-img-wrapper"><img src="https://placehold.co/400x280/A3B18A/212529?text=Mutton+Curry+Cuts&font=Inter" alt="Mutton Curry Cuts"><div class="badge badge-halal"><span class="bi-ling-compact"><span class="en">HALAL</span><span class="ar">حلال</span></span></div><button class="wishlist-btn" title="Add to wishlist"><i class="far fa-heart"></i></button></div>
+                        <div class="card-body">
+                            <div class="bi-ling"><div class="en"><h4 class="card-title">Mutton for Curry (Bone-In)</h4><p class="card-text text-sm">Robustly flavored mutton pieces, perfect for slow-cooked, aromatic curries.</p></div><div class="ar"><h4 class="card-title">لحم ضأن للكاري (بالعظم)</h4><p class="card-text text-sm">قطع لحم ضأن ذات نكهة قوية، مثالية للكاري العطري المطبوخ ببطء.</p></div></div>
+                            <div class="card-price">$13.99/kg</div>
+                            <div class="card-actions">
+                                <select class="form-control text-xs" aria-label="Select weight for Mutton Curry Cuts">
+                                    <option value="1">1 kg</option><option value="2">2 kg</option>
+                                </select>
+                                <button class="btn btn-accent btn-sm"><i class="fas fa-cart-plus"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card product-card">
+                        <div class="card-img-wrapper"><img src="https://placehold.co/400x280/A3B18A/212529?text=Lamb+Liver&font=Inter" alt="Lamb Liver"><div class="badge badge-halal"><span class="bi-ling-compact"><span class="en">HALAL</span><span class="ar">حلال</span></span></div><button class="wishlist-btn" title="Add to wishlist"><i class="far fa-heart"></i></button></div>
+                        <div class="card-body">
+                            <div class="bi-ling"><div class="en"><h4 class="card-title">Fresh Lamb Liver</h4><p class="card-text text-sm">Nutrient-dense and exceptionally flavorful. A traditional delicacy.</p></div><div class="ar"><h4 class="card-title">كبدة خروف طازجة</h4><p class="card-text text-sm">غنية بالعناصر الغذائية وذات نكهة استثنائية. طبق تقليدي شهي.</p></div></div>
+                            <div class="card-price">$9.99/kg</div>
+                            <div class="card-actions">
+                                <select class="form-control text-xs" aria-label="Select weight for Lamb Liver">
+                                    <option value="0.5">500g</option><option value="1">1 kg</option>
+                                </select>
+                                <button class="btn btn-accent btn-sm"><i class="fas fa-cart-plus"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="special-cuts-info" class="card card-info mt-lg">
+                    <div class="card-body">
+                        <h3 class="card-title text-center mb-md"><span class="bi-ling-compact"><span class="en">Bespoke Cuts & Custom Orders</span><span class="ar">قطعيات مفصلة وطلبات مخصصة</span></span></h3>
+                        <div class="bi-ling">
+                            <div class="en"><p class="text-center mb-md">Your culinary vision, our expert butchery. We offer specialized cuts and custom preparation to meet your unique requirements. Whether it's a traditional recipe, a specific thickness, or a large order for an event, we're here to assist.</p></div>
+                            <div class="ar"><p class="text-center mb-md">رؤيتك الطهوية، وجزارتنا الخبيرة. نقدم قطعيات متخصصة وتحضيرًا مخصصًا لتلبية متطلباتك الفريدة. سواء كانت وصفة تقليدية، أو سمكًا معينًا، أو طلبًا كبيرًا لمناسبة ما، نحن هنا للمساعدة.</p></div>
+                        </div>
+                        <div class="grid grid-cols-3 gap-sm text-center">
+                            <div class="info-box"><i class="fas fa-concierge-bell fa-2x"></i><div class="bi-ling"><div class="en"><h4>Custom Butchering</h4><p class="text-xs">Tell us your preference, we'll cut it precisely.</p></div><div class="ar"><h4>جزارة مخصصة</h4><p class="text-xs">أخبرنا بتفضيلاتك، وسنقطعها بدقة.</p></div></div></div>
+                            <div class="info-box"><i class="fas fa-utensils fa-2x"></i><div class="bi-ling"><div class="en"><h4>Specialty & Traditional Cuts</h4><p class="text-xs">For authentic recipes and unique culinary needs.</p></div><div class="ar"><h4>قطعيات متخصصة وتقليدية</h4><p class="text-xs">للوصفات الأصيلة واحتياجات الطهي الفريدة.</p></div></div></div>
+                            <div class="info-box"><i class="fas fa-users fa-2x"></i><div class="bi-ling"><div class="en"><h4>Bulk & Event Orders</h4><p class="text-xs">Catering to large gatherings with special pricing.</p></div><div class="ar"><h4>طلبات الجملة والمناسبات</h4><p class="text-xs">تلبية احتياجات التجمعات الكبيرة بأسعار خاصة.</p></div></div></div>
+                        </div>
+                        <div class="text-center mt-md"><a href="#contact" class="btn btn-primary btn-lg"><span class="bi-ling-compact"><span class="en">Discuss Your Needs</span><span class="ar">ناقش احتياجاتك</span></span></a></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="udheya" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <div class="bi-ling"><div class="en"><h2 class="section-title">Seamless Udheya & Qurbani Services</h2><p class="section-subtitle">Fulfill your sacred duty with ease and confidence. We manage the entire process with utmost care and adherence to tradition.</p></div><div class="ar"><h2 class="section-title">خدمات الأضحية والقرباني السلسة</h2><p class="section-subtitle">أدِ واجبك المقدس بسهولة وثقة. ندير العملية برمتها بعناية فائقة والتزام بالتقاليد.</p></div></div>
+                </div>
+                <div class="grid grid-cols-3 gap-md">
+                    <div class="card package-card">
+                        <div class="package-header">
+                            <h4 class="package-title"><span class="bi-ling-compact"><span class="en">Standard Udheya Package</span><span class="ar">باقة الأضحية القياسية</span></span></h4>
+                            <div class="package-price">$299</div>
+                        </div>
+                        <div class="card-body">
+                            <ul class="package-features">
+                                <li><i class="fas fa-check"></i><span class="bi-ling-compact"><span class="en">Healthy Local Awassi Sheep (30-40kg)</span><span class="ar">خروف عواسي محلي صحي (30-40kg)</span></span></li>
+                                <li><i class="fas fa-check"></i><span class="bi-ling-compact"><span class="en">Professional Islamic Slaughter</span><span class="ar">ذبح إسلامي احترافي</span></span></li>
+                                <li><i class="fas fa-check"></i><span class="bi-ling-compact"><span class="en">Standard Butchering & Cutting</span><span class="ar">تقطيع وجزارة قياسية</span></span></li>
+                                <li><i class="fas fa-check"></i><span class="bi-ling-compact"><span class="en">Hygienic Basic Packaging</span><span class="ar">تعبئة أساسية صحية</span></span></li>
+                                <li><i class="fas fa-check"></i><span class="bi-ling-compact"><span class="en">Reliable Delivery (within 24-48 hrs)</span><span class="ar">توصيل موثوق (خلال 24-48 hrs)</span></span></li>
+                                <li><i class="fas fa-check"></i><span class="bi-ling-compact"><span class="en">Photo Verification of Sacrifice</span><span class="ar">توثيق الذبح بالصور</span></span></li>
+                            </ul>
+                            <a href="#udheya-form-section" class="btn btn-primary btn-block"><span class="bi-ling-compact"><span class="en">Select This Package</span><span class="ar">اختر هذه الباقة</span></span></a>
+                        </div>
+                    </div>
+                    <div class="card package-card featured">
+                        <div class="package-header">
+                            <h4 class="package-title"><span class="bi-ling-compact"><span class="en">Premium Udheya Package</span><span class="ar">باقة الأضحية المميزة</span></span></h4>
+                            <div class="package-price">$399</div>
+                        </div>
+                        <div class="card-body">
+                            <ul class="package-features">
+                                <li><i class="fas fa-check"></i><span class="bi-ling-compact"><span class="en">Choice Barki or Awassi Sheep (40-50kg)</span><span class="ar">خروف برقي أو عواسي مختار (40-50kg)</span></span></li>
+                                <li><i class="fas fa-check"></i><span class="bi-ling-compact"><span class="en">Custom Cutting Preferences</span><span class="ar">تفضيلات تقطيع مخصصة</span></span></li>
+                                <li><i class="fas fa-check"></i><span class="bi-ling-compact"><span class="en">Premium Vacuum-Sealed Packaging</span><span class="ar">تعبئة ممتازة مفرغة من الهواء</span></span></li>
+                                <li><i class="fas fa-check"></i><span class="bi-ling-compact"><span class="en">Priority Same-Day/Next-Day Delivery</span><span class="ar">توصيل بأولوية في نفس اليوم/اليوم التالي</span></span></li>
+                                <li><i class="fas fa-check"></i><span class="bi-ling-compact"><span class="en">Video Verification of Sacrifice</span><span class="ar">توثيق الذبح بالفيديو</span></span></li>
+                                <li><i class="fas fa-check"></i><span class="bi-ling-compact"><span class="en">Dedicated Scheduling & Support</span><span class="ar">جدولة ودعم مخصص</span></span></li>
+                            </ul>
+                            <a href="#udheya-form-section" class="btn btn-accent btn-block"><span class="bi-ling-compact"><span class="en">Choose Premium</span><span class="ar">اختر المميزة</span></span></a>
+                        </div>
+                    </div>
+                    <div class="card package-card">
+                        <div class="package-header">
+                            <h4 class="package-title"><span class="bi-ling-compact"><span class="en">Charity Udheya (Local Distribution)</span><span class="ar">أضحية الصدقة (توزيع محلي)</span></span></h4>
+                            <div class="package-price">$349</div>
+                        </div>
+                        <div class="card-body">
+                            <ul class="package-features">
+                                <li><i class="fas fa-check"></i><span class="bi-ling-compact"><span class="en">Healthy Local Sheep (Approx. 40kg)</span><span class="ar">خروف محلي صحي (حوالي 40kg)</span></span></li>
+                                <li><i class="fas fa-check"></i><span class="bi-ling-compact"><span class="en">100% Meat Donated to Needy Families</span><span class="ar">100% من اللحم يتم التبرع به للأسر المحتاجة</span></span></li>
+                                <li><i class="fas fa-check"></i><span class="bi-ling-compact"><span class="en">Managed & Verified Distribution Process</span><span class="ar">عملية توزيع مُدارة وموثقة</span></span></li>
+                                <li><i class="fas fa-check"></i><span class="bi-ling-compact"><span class="en">Certificate of Donation Provided</span><span class="ar">تقديم شهادة تبرع</span></span></li>
+                                <li><i class="fas fa-check"></i><span class="bi-ling-compact"><span class="en">Photos/Videos of Distribution (where feasible)</span><span class="ar">صور/فيديوهات للتوزيع (حيثما أمكن)</span></span></li>
+                                <li><i class="fas fa-check"></i><span class="bi-ling-compact"><span class="en">Support Local Communities Directly</span><span class="ar">دعم المجتمعات المحلية مباشرة</span></span></li>
+                            </ul>
+                            <a href="#udheya-form-section" class="btn btn-primary btn-block"><span class="bi-ling-compact"><span class="en">Donate Your Udheya</span><span class="ar">تبرع بأضحيتك</span></span></a>
+                        </div>
+                    </div>
+                </div>
+                <div id="udheya-form-section" class="card card-form mt-xl">
+                    <div class="card-body">
+                        <h3 class="text-lg text-center fw-bold mb-md"><span class="bi-ling-compact"><span class="en">Tailor Your Udheya Experience</span><span class="ar">خصص تجربة أضحيتك</span></span></h3>
+                        <form>
+                            <div class="form-grid">
+                                <div class="form-main">
+                                    <div class="grid grid-cols-3 gap-sm mb-md">
+                                        <div class="form-group">
+                                            <label for="udheya-breed-type" class="form-label"><span class="bi-ling-compact"><span class="en">Breed Type</span><span class="ar">نوع السلالة</span></span></label>
+                                            <select id="udheya-breed-type" class="form-control" aria-label="Select Breed Type">
+                                                <option value=""><span class="bi-ling-compact"><span class="en">Select Breed</span><span class="ar">اختر السلالة</span></span></option>
+                                                <option value="awassi">Awassi (Local)</option>
+                                                <option value="barki">Barki (Desert)</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="udheya-weight-range" class="form-label"><span class="bi-ling-compact"><span class="en">Weight Range</span><span class="ar">نطاق الوزن</span></span></label>
+                                            <select id="udheya-weight-range" class="form-control" aria-label="Select Weight Range">
+                                                <option value=""><span class="bi-ling-compact"><span class="en">Select Weight</span><span class="ar">اختر الوزن</span></span></option>
+                                                <option value="30-40">30-40 kg</option>
+                                                <option value="40-50">40-50 kg</option>
+                                                <option value="50+">50+ kg</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="udheya-sacrifice-date" class="form-label"><span class="bi-ling-compact"><span class="en">Sacrifice Date</span><span class="ar">تاريخ الذبح</span></span></label>
+                                            <input type="date" id="udheya-sacrifice-date" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="form-group mb-md">
+                                        <label class="form-label"><span class="bi-ling-compact"><span class="en">Preferred Time Slot for Sacrifice/Delivery</span><span class="ar">الوقت المفضل للذبح/التوصيل</span></span></label>
+                                        <div class="time-slots">
+                                            <div class="time-slot">7:00-8:00</div><div class="time-slot selected">8:00-9:00</div> <div class="time-slot">9:00-10:00</div> <div class="time-slot">10:00-11:00</div> <div class="time-slot">11:00-12:00</div> <div class="time-slot">12:00-13:00</div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group mb-md">
+                                        <label class="form-label"><span class="bi-ling-compact"><span class="en">Butchering & Packaging Preferences</span><span class="ar">تفضيلات الجزارة والتعبئة</span></span></label>
+                                        <div class="grid grid-cols-2 gap-sm">
+                                            <select id="udheya-cutting-pref" class="form-control" aria-label="Cutting Preference">
+                                                <option value="standard"><span class="bi-ling-compact"><span class="en">Standard Cuts</span><span class="ar">قطعيات قياسية</span></span></option>
+                                                <option value="custom">Custom Cuts (Specify Below)</option>
+                                            </select>
+                                            <select id="udheya-packaging-pref" class="form-control" aria-label="Packaging Preference">
+                                                <option value="standard"><span class="bi-ling-compact"><span class="en">Standard Packaging</span><span class="ar">تعبئة قياسية</span></span></option>
+                                                <option value="vacuum_sealed_plus_10">Vacuum Sealed (+$10)</option>
+                                            </select>
+                                        </div>
+                                        <textarea class="form-control mt-sm" placeholder="Specify custom cutting instructions here... | حدد تعليمات التقطيع المخصصة هنا..." rows="2"></textarea>
+                                    </div>
+                                     <div class="grid grid-cols-2 gap-md mb-md">
+                                        <div class="form-group">
+                                            <label class="form-label"><span class="bi-ling-compact"><span class="en">Meat Distribution Choice</span><span class="ar">اختيار توزيع اللحوم</span></span></label>
+                                            <div class="radio-group">
+                                                <label><input type="radio" name="distribution" value="tome" checked><span class="bi-ling-compact"><span class="en">Deliver All to Me</span><span class="ar">توصيل الكل لي</span></span></label>
+                                                <label><input type="radio" name="distribution" value="charity"><span class="bi-ling-compact"><span class="en">Donate All to Charity</span><span class="ar">تبرع بالكل للصدقة</span></span></label>
+                                                <label><input type="radio" name="distribution" value="split"><span class="bi-ling-compact"><span class="en">Split (1/3 Self, 1/3 Gift, 1/3 Charity)</span><span class="ar">تقسيم (ثلث لي، ثلث هدية، ثلث صدقة)</span></span></label>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="udheya-dedication-names" class="form-label"><span class="bi-ling-compact"><span class="en">Names for Dedication (Niyyah)</span><span class="ar">أسماء للإهداء (النية)</span></span></label>
+                                            <input type="text" id="udheya-dedication-names" class="form-control" placeholder="Enter names separated by commas | أدخل الأسماء مفصولة بفواصل">
+                                        </div>
+                                    </div>
+                                    <div class="form-group group-purchase-option">
+                                        <label><input type="checkbox" id="udheya-group-purchase"><span class="bi-ling-compact"><span class="en">Consider Group Purchase?</span><span class="ar">هل تفكر في الشراء الجماعي؟</span></span></label>
+                                        <div class="bi-ling text-sm">
+                                            <div class="en">Share the blessings (and cost!) with family or friends. We can help coordinate. Save up to 20%.</div>
+                                            <div class="ar">شارك البركات (والتكلفة!) مع العائلة أو الأصدقاء. يمكننا المساعدة في التنسيق. وفر حتى 20%.</div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group mb-md">
+                                        <label class="form-label fw-medium"><span class="bi-ling-compact"><span class="en">Choose Your Payment Method</span><span class="ar">اختر طريقة الدفع</span></span></label>
+                                        <div class="payment-methods">
+                                            <div class="payment-method selected"><input type="radio" name="payment" id="udheya-visa" value="visa" checked><label for="udheya-visa"><img src="https://placehold.co/60x40/ffffff/3E2723?text=Visa&font=Inter" alt="Visa"><span class="bi-ling-compact"><span class="en">Visa</span><span class="ar">فيزا</span></span></label></div>
+                                            <div class="payment-method"><input type="radio" name="payment" id="udheya-mastercard" value="mastercard"><label for="udheya-mastercard"><img src="https://placehold.co/60x40/ffffff/3E2723?text=MC&font=Inter" alt="Mastercard"><span class="bi-ling-compact"><span class="en">Mastercard</span><span class="ar">ماستركارد</span></span></label></div>
+                                            <div class="payment-method"><input type="radio" name="payment" id="udheya-fawry" value="fawry"><label for="udheya-fawry"><img src="https://placehold.co/60x40/ffffff/3E2723?text=Fawry&font=Inter" alt="Fawry"><span class="bi-ling-compact"><span class="en">Fawry</span><span class="ar">فوري</span></span></label></div>
+                                            <div class="payment-method"><input type="radio" name="payment" id="udheya-vodafone" value="vodafone"><label for="udheya-vodafone"><img src="https://placehold.co/60x40/ffffff/3E2723?text=VodaC&font=Inter" alt="Vodafone Cash"><span class="bi-ling-compact"><span class="en">Vodafone Cash</span><span class="ar">فودافون كاش</span></span></label></div>
+                                            <div class="payment-method"><input type="radio" name="payment" id="udheya-cod" value="cod"><label for="udheya-cod"><i class="fas fa-money-bill-wave"></i><span class="bi-ling-compact"><span class="en">Cash on Delivery</span><span class="ar">الدفع عند الاستلام</span></span></label></div>
+                                            <div class="payment-method"><input type="radio" name="payment" id="udheya-instapay" value="instapay"><label for="udheya-instapay"><img src="https://placehold.co/60x40/ffffff/3E2723?text=InstaP&font=Inter" alt="InstaPay"><span class="bi-ling-compact"><span class="en">InstaPay</span><span class="ar">إنستا باي</span></span></label></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <aside class="form-aside">
+                                    <div class="bi-ling">
+                                        <div class="en"><h4>Understanding Your Choices</h4><p><strong>Awassi:</strong> Known for its rich, marbled meat and significant fat tail, a traditional favorite.</p><p><strong>Barki:</strong> Offers leaner meat with a distinct, slightly gamey flavor, excellent for health-conscious choices.</p></div>
+                                        <div class="ar"><h4>فهم اختياراتك</h4><p><strong>عواسي:</strong> معروف بلحمه الغني بالدهون وذيله الدهني الكبير، وهو المفضل تقليديًا.</p><p><strong>برقي:</strong> يقدم لحمًا أقل دهونًا بنكهة مميزة، ممتاز للخيارات الصحية.</p></div>
+                                    </div>
+                                    <hr>
+                                    <div class="bi-ling">
+                                        <div class="en"><h4>Our Udheya Promise</h4><ul class="styled-list"><li>All animals meet Sharia requirements.</li><li>Humane handling and sacrifice.</li><li>Clear options for personal use or charity.</li><li>Full transparency and documentation.</li></ul></div>
+                                        <div class="ar"><h4>وعدنا في الأضحية</h4><ul class="styled-list"><li>جميع الحيوانات تستوفي شروط الشريعة.</li><li>معاملة إنسانية وذبح.</li><li>خيارات واضحة للاستخدام الشخصي أو الصدقة.</li><li>شفافية كاملة وتوثيق.</li></ul></div>
+                                    </div>
+                                </aside>
+                            </div>
+                            <button type="submit" class="btn btn-accent btn-lg btn-block"><i class="fas fa-paper-plane"></i><span class="bi-ling-compact"><span class="en">Submit Udheya Request</span><span class="ar">إرسال طلب الأضحية</span></span></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ORIGINAL SUPPORT, FAQ, DELIVERY INFO SECTION -->
+        <section id="support" class="section section-alt">
+            <div class="container">
+                <div id="faq" class="mb-lg">
+                    <div class="section-header">
+                        <div class="bi-ling"><div class="en"><h2 class="section-title">Your Questions, Answered</h2><p class="section-subtitle">Find clear answers to common inquiries about our products and services.</p></div><div class="ar"><h2 class="section-title">أسئلتكم، مجابة</h2><p class="section-subtitle">اعثر على إجابات واضحة للاستفسارات الشائعة حول منتجاتنا وخدماتنا.</p></div></div>
+                    </div>
+                    <div class="grid grid-cols-2 gap-md">
+                        <div class="card faq-card"><div class="card-body"><div class="bi-ling"><div class="en"><h4>How does the Udheya/Qurbani service work?</h4><p>You select your preferred sheep and package. We ensure Sharia compliance, perform the sacrifice, process, and deliver the meat as per your choice.</p></div><div class="ar"><h4>كيف تعمل خدمة الأضحية/القرباني؟</h4><p>تختار الخروف المفضل لديك والباقة. نضمن الامتثال للشريعة، ونقوم بالذبح، والتجهيز، وتوصيل اللحم حسب اختيارك.</p></div></div></div></div>
+                        <div class="card faq-card"><div class="card-body"><div class="bi-ling"><div class="en"><h4>What sheep breeds do you offer?</h4><p>We offer Awassi (richer, marbled meat) and Barki (leaner, distinct flavor). Choice depends on taste and fat preference.</p></div><div class="ar"><h4>ما هي سلالات الأغنام التي تقدمونها؟</h4><p>نقدم العواسي (لحم أغنى بالدهون) والبرقي (لحم أقل دهونًا بنكهة مميزة). الاختيار يعتمد على الذوق وتفضيل الدهون.</p></div></div></div></div>
+                        <div class="card faq-card"><div class="card-body"><div class="bi-ling"><div class="en"><h4>What payment methods are accepted?</h4><p>We accept Visa, Mastercard, Fawry, Vodafone Cash, InstaPay, and Cash on Delivery (COD) for eligible orders.</p></div><div class="ar"><h4>ما هي طرق الدفع المقبولة؟</h4><p>نقبل فيزا، ماستركارد، فوري، فودافون كاش، إنستا باي، والدفع عند الاستلام للطلبات المؤهلة.</p></div></div></div></div>
+                        <div class="card faq-card"><div class="card-body"><div class="bi-ling"><div class="en"><h4>How is meat packaged for freshness?</h4><p>Fresh meat is vacuum-sealed. Udheya meat is packaged hygienically based on your selected package options.</p></div><div class="ar"><h4>كيف يتم تغليف اللحوم لضمان النضارة؟</h4><p>اللحوم الطازجة معبأة بتفريغ الهواء. لحوم الأضحية تعبأ بشكل صحي بناءً على الباقة المختارة.</p></div></div></div></div>
+                        <div class="card faq-card"><div class="card-body"><div class="bi-ling"><div class="en"><h4>How does the group purchase for Udheya work?</h4><p>You can opt for a group purchase to share the cost of an Udheya animal. We can facilitate matching. Meat is divided equally or as agreed.</p></div><div class="ar"><h4>كيف يعمل الشراء الجماعي للأضحية؟</h4><p>يمكنك اختيار الشراء الجماعي لتقاسم تكلفة الأضحية. يمكننا تسهيل الربط. يقسم اللحم بالتساوي أو حسب الاتفاق.</p></div></div></div></div>
+                        <div class="card faq-card"><div class="card-body"><div class="bi-ling"><div class="en"><h4>Can I visit the farm to see the animals?</h4><p>Yes, by appointment. Contact customer service to schedule a visit and learn about our farming practices, ensuring minimal disruption.</p></div><div class="ar"><h4>هل يمكنني زيارة المزرعة لرؤية الحيوانات؟</h4><p>نعم، بموعد. اتصل بخدمة العملاء لتحديد موعد زيارة ومعرفة المزيد عن ممارساتنا الزراعية، مع ضمان أقل قدر من الإزعاج.</p></div></div></div></div>
+                        <div class="card faq-card"><div class="card-body"><div class="bi-ling"><div class="en"><h4>Is your meat always fresh, or do you sell frozen?</h4><p>Our primary offering is fresh, never-frozen meat. Some specific items or bulk orders might be available frozen, clearly labeled.</p></div><div class="ar"><h4>هل لحومكم دائماً طازجة، أم تبيعون المجمد؟</h4><p>عرضنا الأساسي هو اللحوم الطازجة غير المجمدة. بعض الأصناف المحددة أو الطلبات الكبيرة قد تكون مجمدة، ويتم توضيح ذلك.</p></div></div></div></div>
+                        <div class="card faq-card"><div class="card-body"><div class="bi-ling"><div class="en"><h4>What are your delivery areas and charges?</h4><p>We deliver across major cities. Charges are based on location and order size. Use the shipping calculator in the Delivery section or see at checkout.</p></div><div class="ar"><h4>ما هي مناطق التوصيل ورسومها؟</h4><p>نقوم بالتوصيل عبر المدن الرئيسية. تعتمد الرسوم على الموقع وحجم الطلب. استخدم حاسبة الشحن في قسم التوصيل أو راجعها عند الدفع.</p></div></div></div></div>
+                    </div>
+                </div>
+                <div id="delivery-info" class="mt-lg">
+                    <div class="section-header">
+                        <div class="bi-ling"><div class="en"><h2 class="section-title">Delivery & Shipping</h2><p class="section-subtitle">Ensuring your order arrives fresh and on time.</p></div><div class="ar"><h2 class="section-title">التوصيل والشحن</h2><p class="section-subtitle">نضمن وصول طلبك طازجًا وفي الوقت المحدد.</p></div></div>
+                    </div>
+                    <div class="grid grid-cols-2 gap-lg">
+                        <div class="card delivery-info-card">
+                            <div class="card-body">
+                                <h3><span class="bi-ling-compact"><span class="en">Estimate Shipping Costs</span><span class="ar">تقدير تكاليف الشحن</span></span></h3>
+                                <form>
+                                    <div class="form-group">
+                                        <label for="calc-gov" class="form-label"><span class="bi-ling-compact"><span class="en">Select Governorate</span><span class="ar">اختر المحافظة</span></span></label>
+                                        <select id="calc-gov" class="form-control text-sm" aria-label="Select Governorate">
+                                            <option value=""><span class="bi-ling-compact"><span class="en">Select Governorate</span><span class="ar">اختر المحافظة</span></span></option>
+                                            <option value="cairo">Cairo</option><option value="giza">Giza</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="calc-dist" class="form-label"><span class="bi-ling-compact"><span class="en">Select City/District</span><span class="ar">اختر المدينة/الحي</span></span></label>
+                                        <select id="calc-dist" class="form-control text-sm" aria-label="Select District">
+                                            <option value=""><span class="bi-ling-compact"><span class="en">Select District</span><span class="ar">اختر المنطقة</span></span></option>
+                                            <option value="maadi">Maadi</option><option value="nasr_city">Nasr City</option>
+                                        </select>
+                                    </div>
+                                    <button type="button" class="btn btn-primary btn-block text-sm"><span class="bi-ling-compact"><span class="en">Calculate Shipping</span><span class="ar">حساب تكلفة الشحن</span></span></button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="card delivery-info-card">
+                            <div class="card-body">
+                                <h3><span class="bi-ling-compact"><span class="en">Our Delivery Promise</span><span class="ar">وعدنا في التوصيل</span></span></h3>
+                                <div class="bi-ling">
+                                    <div class="en">
+                                        <ul>
+                                            <li><strong>Same-Day (Cairo & Giza):</strong> Orders before 12 PM.</li>
+                                            <li><strong>Next-Day:</strong> Most other governorates.</li>
+                                            <li><strong>Free Shipping:</strong> On orders over EGP 3000.</li>
+                                            <li><strong>Refrigerated Transport:</strong> Temperature-controlled.</li>
+                                            <li><strong>Scheduled Livestock Delivery:</strong> Coordinated.</li>
+                                        </ul>
+                                    </div>
+                                    <div class="ar">
+                                        <ul>
+                                            <li><strong>نفس اليوم (القاهرة والجيزة):</strong> للطلبات قبل 12 PM.</li>
+                                            <li><strong>اليوم التالي:</strong> لمعظم المحافظات الأخرى.</li>
+                                            <li><strong>شحن مجاني:</strong> للطلبات فوق EGP 3000.</li>
+                                            <li><strong>نقل مبرد:</strong> يتم التحكم في درجة الحرار.</li>
+                                            <li><strong>توصيل المواشي المجدول:</strong> يتم تنسيقه.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="delivery-note">
+                                    <div class="bi-ling">
+                                        <div class="en"><p><strong>Important for Udheya:</strong> Delivery for Udheya/Qurbani is precisely scheduled based on your selected Eid day and time slot.</p></div>
+                                        <div class="ar"><p><strong>هام للأضحية:</strong> يتم جدولة توصيل الأضحية/القرباني بدقة بناءً على يوم العيد والوقت المختار.</p></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END ORIGINAL SUPPORT SECTION -->
+
+        <!-- ORIGINAL CONTACT SECTION -->
+        <section id="contact" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <div class="bi-ling"><div class="en"><h2 class="section-title">We're Here to Help</h2><p class="section-subtitle">Have a question, a special request, or need assistance? Reach out to our friendly team.</p></div><div class="ar"><h2 class="section-title">نحن هنا للمساعدة</h2><p class="section-subtitle">لديك سؤال، طلب خاص، أو تحتاج إلى مساعدة؟ تواصل مع فريقنا الودود.</p></div></div>
+                </div>
+                <div class="card card-form">
+                    <div class="card-body">
+                        <div class="grid grid-cols-2 gap-lg"> <!-- This is the original contact form grid -->
+                            <div>
+                                <h3 class="mb-md"><span class="bi-ling-compact"><span class="en">Send Us Your Inquiry</span><span class="ar">أرسل لنا استفسارك</span></span></h3>
+                                <form>
+                                    <div class="form-group">
+                                        <label for="contact-name" class="form-label"><span class="bi-ling-compact"><span class="en">Full Name</span><span class="ar">الاسم الكامل</span></span></label>
+                                        <input type="text" id="contact-name" class="form-control" placeholder="e.g., Ahmed Hassan | مثال: أحمد حسن">
+                                    </div>
+                                    <div class="grid grid-cols-2 gap-sm">
+                                        <div class="form-group">
+                                            <label for="contact-email" class="form-label"><span class="bi-ling-compact"><span class="en">Email Address</span><span class="ar">البريد الإلكتروني</span></span></label>
+                                            <input type="email" id="contact-email" class="form-control" placeholder="you@example.com | بريدك@مثال.كم">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="contact-phone" class="form-label"><span class="bi-ling-compact"><span class="en">Phone (Optional)</span><span class="ar">رقم الهاتف (اختياري)</span></span></label>
+                                            <input type="tel" id="contact-phone" class="form-control" placeholder="+20 1XX XXX XXXX">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="contact-subject" class="form-label"><span class="bi-ling-compact"><span class="en">Subject</span><span class="ar">الموضوع</span></span></label>
+                                        <input type="text" id="contact-subject" class="form-control" placeholder="e.g., Udheya Inquiry | مثال: استفسار عن الأضحية">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="contact-message" class="form-label"><span class="bi-ling-compact"><span class="en">Your Message</span><span class="ar">رسالتك</span></span></label>
+                                        <textarea id="contact-message" class="form-control" rows="4" placeholder="Please type your detailed message here... | يرجى كتابة رسالتك التفصيلية هنا..."></textarea>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary btn-lg"><i class="fas fa-paper-plane"></i><span class="bi-ling-compact"><span class="en">Send Message</span><span class="ar">إرسال الرسالة</span></span></button>
+                                </form>
+                            </div>
+                            <div class="contact-info-panel">
+                                <h3 class="mb-md"><span class="bi-ling-compact"><span class="en">Direct Contact & Location</span><span class="ar">الاتصال المباشر والموقع</span></span></h3>
+                                <ul class="contact-list">
+                                    <li><i class="fas fa-map-marker-alt"></i><div class="bi-ling">
+                                        <div class="en"><strong>Our Farm & Office:</strong><br>123 Shepherds Way,<br>Nile Delta Region, Egypt</div>
+                                        <div class="ar"><strong>مزرعتنا ومكتبنا:</strong><br>123 طريق الرعاة،<br>منطقة دلتا النيل، مصر</div></div></li>
+                                    <li><i class="fas fa-phone-alt"></i><div class="bi-ling">
+                                        <div class="en"><strong>Call Us:</strong><br>Sales: +20 123 456 7890<br>Support: +20 098 765 4321</div>
+                                        <div class="ar"><strong>اتصل بنا:</strong><br>المبيعات: +20 123 456 7890<br>الدعم: +20 098 765 4321</div></div></li>
+                                    <li><i class="fas fa-envelope"></i><div class="bi-ling">
+                                        <div class="en"><strong>Email Us:</strong><br>General: info@sheepland.example.com<br>Orders: sales@sheepland.example.com</div>
+                                        <div class="ar"><strong>راسلنا عبر البريد:</strong><br>عام: info@sheepland.example.com<br>الطلبات: sales@sheepland.example.com</div></div></li>
+                                    <li><i class="fas fa-business-time"></i><div class="bi-ling">
+                                        <div class="en"><strong>Business Hours:</strong><br>Sat - Thu: 8 AM - 7 PM<br>Fri: Closed (Online Orders Accepted)</div>
+                                        <div class="ar"><strong>ساعات العمل:</strong><br>السبت - الخميس: 8 AM - 7 PM<br>الجمعة: مغلق (نستقبل الطلبات عبر الإنترنت)</div></div></li>
+                                </ul>
+                                <div class="social-links">
+                                    <a href="#" class="social-link" title="Facebook | فيسبوك"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="#" class="social-link" title="Instagram | انستغرام"><i class="fab fa-instagram"></i></a>
+                                    <a href="#" class="social-link" title="Twitter | تويتر"><i class="fab fa-twitter"></i></a>
+                                    <a href="#" class="social-link" title="WhatsApp | واتساب"><i class="fab fa-whatsapp"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END ORIGINAL CONTACT SECTION -->
+
+        <!-- ORIGINAL NEWSLETTER SECTION -->
+        <section class="section section-alt newsletter-section">
+            <div class="container">
+                <i class="fas fa-newspaper fa-3x mb-md" style="color:var(--primary-brand-dark);"></i>
+                <div class="bi-ling">
+                    <div class="en"><h3>Stay Informed with Sheep Land</h3><p>Subscribe to our newsletter for exclusive offers, new arrivals, important Udheya updates, and farming insights.</p></div>
+                    <div class="ar"><h3>ابق على اطلاع مع أرض الأغنام</h3><p>اشترك في نشرتنا الإخبارية للحصول على عروض حصرية، ووصول المنتجات الجديدة، وتحديثات هامة عن الأضحية، ورؤى زراعية.</p></div>
+                </div>
+                <form class="newsletter-form">
+                    <input type="email" class="form-control" placeholder="Your Email Address | عنوان بريدك الإلكتروني">
+                    <button type="submit" class="btn btn-primary btn-lg"><span class="bi-ling-compact"><span class="en">Subscribe</span><span class="ar">اشترك</span></span></button>
+                </form>
+            </div>
+        </section>
+        <!-- END ORIGINAL NEWSLETTER SECTION -->
+        
+        <!-- ORIGINAL PRIVACY SECTION (Hidden by default) -->
+        <section id="privacy" class="section section-alt" style="display: none;">
+            <div class="container">
+                <div class="section-header">
+                    <div class="bi-ling">
+                        <div class="en"><h2 class="section-title">Privacy Policy</h2><p class="section-subtitle">Our commitment to your privacy.</p></div>
+                        <div class="ar"><h2 class="section-title">سياسة الخصوصية</h2><p class="section-subtitle">التزامنا بخصوصيتك.</p></div>
+                    </div>
+                </div>
+                <div class="bi-ling">
+                    <div class="en">
+                        <p><strong>Last Updated: [Date - e.g., October 26, 2023]</strong></p>
+                        <p>Sheep Land ("us", "we", or "our") operates the [Your Website URL e.g., https://sheepland.example.com] website (the "Service").</p>
+                        <!-- ... Rest of original privacy content ... -->
+                    </div>
+                    <div class="ar">
+                        <p><strong>آخر تحديث: [التاريخ - مثال: ٢٦ أكتوبر ٢٠٢٣]</strong></p>
+                        <p>أرض الأغنام ("نحن"، "لنا"، أو "خاصتنا") تدير موقع [رابط موقعك الإلكتروني مثال: https://sheepland.example.com] ("الخدمة").</p>
+                        <!-- ... Rest of original privacy content ... -->
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END ORIGINAL PRIVACY SECTION -->
+    </main>
+
+    <!-- ORIGINAL FOOTER (with modifications as per last request) -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <a href="#home" class="logo footer-logo">
+                        <img src="https://placehold.co/50x50/8D6E63/FAF8F5?text=SL&font=Inter" alt="Sheep Land Logo">
+                        <span class="bi-ling-compact"><span class="en">Sheep Land</span><span class="ar">أرض الأغنام</span></span>
+                    </a>
+                    <div class="bi-ling">
+                        <div class="en"><p class="footer-tagline">Your trusted partner for premium halal meat, quality livestock, and dedicated Udheya services.</p></div>
+                        <div class="ar"><p class="footer-tagline">شريكك الموثوق للحوم الحلال الممتازة، والمواشي عالية الجودة، وخدمات الأضحية المتفانية.</p></div>
+                    </div>
+                </div>
+                
+                <!-- "Explore" column removed -->
+                <!-- "Customer Care" column removed -->
+
+                <div> <!-- "Get In Touch" column - heavily modified -->
+                    <h4 class="footer-title"><span class="bi-ling-compact"><span class="en">Get In Touch</span><span class="ar">ابقى على تواصل</span></span></h4>
+                    <!-- ul.footer-contact is removed as all its original items were requested to be removed -->
+                    <div class="social-links footer-social" style="margin-top: 0;"> <!-- Social links remain, adjusted margin if ul is gone -->
+                        <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p><span class="bi-ling-compact">
+                    <span class="en">&copy; <span id="currentYearFooterEn"></span> Sheep Land. All Rights Reserved. Crafted with care.</span>
+                    <span class="ar">&copy; <span id="currentYearFooterAr"></span> أرض الأغنام. جميع الحقوق محفوظة. صنع بعناية.</span>
+                </span></p>
+                <div class="payment-icons">
+                    <img src="https://placehold.co/50x32/FFFFFF/3E2723?text=VISA&font=Inter&fontcolor=3E2723" alt="Visa">
+                    <img src="https://placehold.co/50x32/FFFFFF/3E2723?text=MC&font=Inter&fontcolor=3E2723" alt="Mastercard">
+                    <img src="https://placehold.co/50x32/FFFFFF/3E2723?text=Fawry&font=Inter&fontcolor=3E2723" alt="Fawry">
+                    <img src="https://placehold.co/50x32/FFFFFF/3E2723?text=VodaC&font=Inter&fontcolor=3E2723" alt="Vodafone Cash">
+                    <img src="https://placehold.co/50x32/FFFFFF/3E2723?text=InstaP&font=Inter&fontcolor=3E2723" alt="InstaPay">
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- END ORIGINAL FOOTER (modified) -->
+
+
+    <a href="https://wa.me/201234567890?text=Hello%20Sheep%20Land" target="_blank" class="fab fab-whatsapp" title="WhatsApp Us | تواصل عبر واتساب" aria-label="WhatsApp Us"><i class="fab fa-whatsapp"></i></a>
+
+    <script>
+        const year = new Date().getFullYear();
+        const yearElEn = document.getElementById("currentYearFooterEn");
+        const yearElAr = document.getElementById("currentYearFooterAr");
+
+        if (yearElEn) yearElEn.textContent = year;
+        if (yearElAr) yearElAr.textContent = year.toLocaleString('ar-EG');
+
+
+        const mobileMenuToggle = document.getElementById("mobileMenuToggle");
+        const mainNavMenu = document.getElementById("mainNavMenu");
+
+        if (mobileMenuToggle && mainNavMenu) {
+            mobileMenuToggle.addEventListener("click", () => {
+                const isExpanded = mainNavMenu.classList.toggle("active");
+                mobileMenuToggle.setAttribute("aria-expanded", isExpanded);
+                const icon = mobileMenuToggle.querySelector("i");
+                icon.classList.toggle("fa-bars");
+                icon.classList.toggle("fa-times");
+            });
+        }
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener("click", function (e) {
+                const targetId = this.getAttribute("href");
+
+                if (targetId === "#privacy") { // Privacy handling restored
+                    e.preventDefault();
+                    const privacySection = document.getElementById("privacy");
+                    if (privacySection) {
+                        privacySection.style.display = 'block'; 
+                        const header = document.querySelector('header.header');
+                        const offset = header ? header.offsetHeight : 70;
+                        const elementPosition = privacySection.getBoundingClientRect().top;
+                        const offsetPosition = elementPosition + window.pageYOffset - offset;
+                        window.scrollTo({ top: offsetPosition, behavior: "smooth" });
+
+                        if (mainNavMenu && mainNavMenu.classList.contains("active") && mobileMenuToggle) {
+                            if (mainNavMenu.contains(anchor) || anchor.closest('.footer-links')) { 
+                                mainNavMenu.classList.remove("active");
+                                mobileMenuToggle.setAttribute("aria-expanded", "false");
+                                const icon = mobileMenuToggle.querySelector("i");
+                                icon.classList.remove("fa-times");
+                                icon.classList.add("fa-bars");
+                            }
+                        }
+                        return; 
+                    }
+                }
+
+                if (targetId === "#" || targetId.startsWith("#!")) return; 
+
+                let targetElement;
+                try {
+                    targetElement = document.querySelector(targetId);
+                } catch (err) {
+                    console.warn("Invalid selector for smooth scroll:", targetId);
+                    return;
+                }
+
+                if (targetElement) {
+                    e.preventDefault();
+                    const header = document.querySelector('header.header');
+                    const offset = header ? header.offsetHeight : 70; 
+                    
+                    const elementPosition = targetElement.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - offset;
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: "smooth"
+                    });
+
+                    if (mainNavMenu && mainNavMenu.classList.contains("active") && mobileMenuToggle) {
+                        if (mainNavMenu.contains(anchor) || anchor.closest('.footer-links')) { 
+                            mainNavMenu.classList.remove("active");
+                            mobileMenuToggle.setAttribute("aria-expanded", "false");
+                            const icon = mobileMenuToggle.querySelector("i");
+                            icon.classList.remove("fa-times");
+                            icon.classList.add("fa-bars");
+                        }
+                    }
+                }
+            });
+        });
+
+        document.querySelectorAll(".wishlist-btn").forEach(button => {
+            button.addEventListener("click", function () {
+                this.classList.toggle("active");
+                const icon = this.querySelector("i");
+                if (this.classList.contains("active")) {
+                    icon.classList.remove("far");
+                    icon.classList.add("fas");
+                } else {
+                    icon.classList.remove("fas");
+                    icon.classList.add("far");
+                }
+            });
+        });
+        
+        function setupToggleSelection(selector, parentSelector, selectedClass = "selected") {
+            document.querySelectorAll(selector).forEach(item => {
+                const clickableItem = (item.tagName === 'LABEL' ? item : item); 
+                
+                clickableItem.addEventListener("click", function(event) {
+                    const actualItemToSelect = (clickableItem.closest(selector.split(" ")[0]) || clickableItem);
+                    const parent = actualItemToSelect.closest(parentSelector);
+                    if (parent) {
+                        if(actualItemToSelect.classList.contains('time-slot') || actualItemToSelect.closest('.payment-method')) {
+                           parent.querySelectorAll(selector.split(" ")[0]).forEach(el => el.classList.remove(selectedClass));
+                        }
+                    }
+                    actualItemToSelect.classList.add(selectedClass);
+
+                    const radioInput = actualItemToSelect.querySelector('input[type="radio"]');
+                    if (radioInput) {
+                        radioInput.checked = true;
+                    } else {
+                        const inputForLabel = document.getElementById(clickableItem.getAttribute('for'));
+                        if (inputForLabel && inputForLabel.type === 'radio') {
+                             inputForLabel.checked = true;
+                        } else {
+                            const inputInside = clickableItem.parentNode.querySelector('input[type="radio"]'); 
+                            if (inputInside && inputInside.type === 'radio') inputInside.checked = true;
+                        }
+                    }
+                });
+            });
+        }
+
+        setupToggleSelection(".time-slot", ".time-slots");
+        
+        document.querySelectorAll('.payment-method input[type="radio"]').forEach(radio => {
+            radio.addEventListener('change', function() {
+                document.querySelectorAll('.payment-method').forEach(pm => pm.classList.remove('selected'));
+                if (this.checked) {
+                    this.closest('.payment-method').classList.add('selected');
+                }
+            });
+            if (radio.checked) { 
+                 radio.closest('.payment-method').classList.add('selected');
+            }
+        });
+
+        document.querySelectorAll(".nav-item.dropdown .dropdown-toggle").forEach(toggle => {
+            toggle.addEventListener("click", function (e) {
+                if (window.innerWidth >= 769) { 
+                    return; 
+                }
+                e.preventDefault(); 
+                this.parentElement.classList.toggle("open");
+            });
+        });
+    </script>
+</body>
+</html>
