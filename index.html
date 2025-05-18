@@ -79,6 +79,31 @@
   </header>
   <main>
     <!-- Hero section -->
+
+    <section class="promo" style="margin-top: 1rem; margin-bottom: -3rem;">
+      <div class="container">
+
+        <div class=hero-promo-banner-container>
+          <div class=promo-banner>
+            <div class=promo-banner-content><i class="fas fa-calendar-alt fa-2x"></i>
+              <div class=bi-ling>
+                <div class=en>
+                  <h3 class="text-md fw-bold mb-0">Eid Al-Adha is Coming!</h3>
+                  <p class=text-sm>Only <strong>45 days</strong> left. Book your Udheya early &
+                    get <span>15% Discount!</span></p>
+                </div>
+                <div class=ar>
+                  <h3 class="text-md fw-bold mb-0"> عيد الأضحى يقترب!</h3>
+                  <p class=text-sm>متبقي <strong>45</strong> يومًا فقط. احجز أضحيتك مبكرًا واحصل
+                    على <span>خصم 15%!</span></p>
+                </div>
+              </div>
+            </div><a href=#udheya class="btn btn-warning btn-lg"><span class=bi-ling-compact><span class=en>Reserve
+                  Now</span><span class=ar>احجز الآن</span></span></a>
+          </div>
+        </div>
+      </div>
+    </section>
     <section class="hero hero-revamped" id=home>
       <div class=container>
         <div class=hero-content-wrapper>
@@ -102,25 +127,6 @@
               class="btn btn-outline-light btn-lg"><i class="fas fa-store"></i><span class=bi-ling-compact><span
                   class=en>Explore Our Range</span><span class=ar>تصفح
                   منتجاتنا</span></span></a></div>
-          <div class=hero-promo-banner-container>
-            <div class=promo-banner>
-              <div class=promo-banner-content><i class="fas fa-calendar-alt fa-2x"></i>
-                <div class=bi-ling>
-                  <div class=en>
-                    <h3 class="text-md fw-bold mb-0">Eid Al-Adha is Coming!</h3>
-                    <p class=text-sm>Only <strong>45 days</strong> left. Book your Udheya early &
-                      get <span>15% Discount!</span></p>
-                  </div>
-                  <div class=ar>
-                    <h3 class="text-md fw-bold mb-0"> عيد الأضحى يقترب!</h3>
-                    <p class=text-sm>متبقي <strong>45</strong> يومًا فقط. احجز أضحيتك مبكرًا واحصل
-                      على <span>خصم 15%!</span></p>
-                  </div>
-                </div>
-              </div><a href=#udheya class="btn btn-warning btn-lg"><span class=bi-ling-compact><span class=en>Reserve
-                    Now</span><span class=ar>احجز الآن</span></span></a>
-            </div>
-          </div>
           <div class=hero-commitment-features>
             <div class="grid grid-cols-4 features-grid">
               <div class=feature-item>
@@ -181,7 +187,7 @@
       </div>
     </section>
     <!-- Live stock -->
-    <section id=livestock class=section>
+    <section id=livestock style="padding-top: 1rem;" class=section>
       <div class=container>
         <div class="section-header">
           <div class="bi-ling">
@@ -622,7 +628,7 @@
                 </div>
               </div>
             </div>
-            <div class="text-center mt-md"><a href=#contact class="btn btn-primary btn-lg"><span
+            <div class="text-center mt-md"><a href=#contact class="btn btn-primary " style="margin-top: 0.5rem; "><span
                   class=bi-ling-compact><span class=en>Discuss Your Needs</span><span class=ar>ناقش
                     احتياجاتك</span></span></a></div>
           </div>
@@ -970,220 +976,230 @@
               </div>
             </div>
           </div>
-          <div class="faq-accordion-wrapper">
-            <div class="card faq-card">
-              <div class=card-body>
-                <div class=faq-trigger role=button tabindex=0 aria-expanded=false>
-                  <div class="bi-ling faq-question-text-container">
-                    <div class=en>
-                      <h4 class=faq-question-title>How does the Udheya/Qurbani service work?</h4>
-                    </div>
-                    <div class=ar>
-                      <h4 class=faq-question-title>كيف تعمل خدمة الأضحية/القرباني؟</h4>
-                    </div>
-                  </div><i class="fas fa-chevron-down faq-toggle-icon"></i>
+          <!-- FAQ -->
+          <style>
+            .faq_container {
+              display: grid;
+              grid-template-columns: repeat(2, 1fr);
+              gap: 20px;
+              max-width: 1200px;
+              margin: 0 auto;
+              padding: 20px;
+            }
+
+
+            .faq_item {
+              border-radius: 8px;
+              background-color: #fff;
+              box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+              padding: 20px;
+              margin-bottom: 15px;
+              transition: transform 0.2s, box-shadow 0.2s;
+            }
+
+            .faq_item:hover {
+              transform: translateY(-2px);
+              box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            }
+
+            .faq_question {
+              display: flex;
+              justify-content: space-between;
+              margin-bottom: 10px;
+            }
+
+            .faq_question_en {
+              text-align: left;
+              font-weight: bold;
+              color: #333;
+              font-size: 16px;
+              width: 48%;
+            }
+
+            .faq_question_ar {
+              text-align: right;
+              font-weight: bold;
+              color: #333;
+              font-size: 16px;
+              width: 48%;
+              direction: rtl;
+            }
+
+            .faq_answer {
+              display: flex;
+              justify-content: space-between;
+            }
+
+            .faq_answer_en {
+              text-align: left;
+              color: #555;
+              font-size: 14px;
+              width: 48%;
+            }
+
+            .faq_answer_ar {
+              text-align: right;
+              color: #555;
+              font-size: 14px;
+              width: 48%;
+              direction: rtl;
+            }
+
+            @media (max-width: 768px) {
+              .faq_container {
+                grid-template-columns: 1fr;
+              }
+
+              .faq_question_en,
+              .faq_question_ar,
+              .faq_answer_en,
+              .faq_answer_ar {
+                width: 100%;
+              }
+
+              .faq_question,
+              .faq_answer {
+                flex-direction: column;
+                gap: 10px;
+              }
+            }
+          </style>
+          <div class="faq_container">
+            <div class="faq_item">
+              <div class="faq_question">
+                <div class="faq_question_en">How does the Udheya/Qurbani service work?</div>
+                <div class="faq_question_ar">كيف تعمل خدمة الأضحية/القرباني؟</div>
+              </div>
+              <div class="faq_answer">
+                <div class="faq_answer_en">
+                  <p>You select your preferred sheep and package. We ensure Sharia compliance, perform the sacrifice,
+                    process, and deliver the meat as per your choice.</p>
                 </div>
-                <div class=faq-answer>
-                  <div class=bi-ling>
-                    <div class=en>
-                      <p>You select your preferred sheep and package. We ensure Sharia compliance,
-                        perform the sacrifice, process, and deliver the meat as per your choice.
-                      </p>
-                    </div>
-                    <div class=ar>
-                      <p>تختار الخروف المفضل لديك والباقة. نضمن الامتثال للشريعة، ونقوم بالذبح،
-                        والتجهيز، وتوصيل اللحم حسب اختيارك.</p>
-                    </div>
-                  </div>
+                <div class="faq_answer_ar">
+                  <p>تختار الخروف المفضل لديك والباقة. نضمن الامتثال للشريعة، ونقوم بالذبح، والتجهيز، وتوصيل اللحم حسب
+                    اختيارك.</p>
                 </div>
               </div>
             </div>
-            <div class="card faq-card">
-              <div class=card-body>
-                <div class=faq-trigger role=button tabindex=0 aria-expanded=false>
-                  <div class="bi-ling faq-question-text-container">
-                    <div class=en>
-                      <h4 class=faq-question-title>What sheep breeds do you offer?</h4>
-                    </div>
-                    <div class=ar>
-                      <h4 class=faq-question-title>ما هي سلالات الأغنام التي تقدمونها؟</h4>
-                    </div>
-                  </div><i class="fas fa-chevron-down faq-toggle-icon"></i>
+
+            <div class="faq_item">
+              <div class="faq_question">
+                <div class="faq_question_en">What sheep breeds do you offer?</div>
+                <div class="faq_question_ar">ما هي سلالات الأغنام التي تقدمونها؟</div>
+              </div>
+              <div class="faq_answer">
+                <div class="faq_answer_en">
+                  <p>We offer Baladi (excellent local taste) and Barki (leaner, distinct flavor). Choice depends on
+                    taste and fat preference.</p>
                 </div>
-                <div class=faq-answer>
-                  <div class=bi-ling>
-                    <div class=en>
-                      <p>We offer Baladi (excellent local taste) and Barki (leaner, distinct
-                        flavor). Choice depends on taste and fat preference.</p>
-                    </div>
-                    <div class=ar>
-                      <p>نقدم البلدي (طعم محلي ممتاز) والبرقي (لحم أقل دهونًا بنكهة مميزة).
-                        الاختيار يعتمد على الذوق وتفضيل الدهون.</p>
-                    </div>
-                  </div>
+                <div class="faq_answer_ar">
+                  <p>نقدم البلدي (طعم محلي ممتاز) والبرقي (لحم أقل دهونًا بنكهة مميزة). الاختيار يعتمد على الذوق وتفضيل
+                    الدهون.</p>
                 </div>
               </div>
             </div>
-            <div class="card faq-card">
-              <div class=card-body>
-                <div class=faq-trigger role=button tabindex=0 aria-expanded=false>
-                  <div class="bi-ling faq-question-text-container">
-                    <div class=en>
-                      <h4 class=faq-question-title>What payment methods are accepted?</h4>
-                    </div>
-                    <div class=ar>
-                      <h4 class=faq-question-title>ما هي طرق الدفع المقبولة؟</h4>
-                    </div>
-                  </div><i class="fas fa-chevron-down faq-toggle-icon"></i>
+
+            <div class="faq_item">
+              <div class="faq_question">
+                <div class="faq_question_en">What payment methods are accepted?</div>
+                <div class="faq_question_ar">ما هي طرق الدفع المقبولة؟</div>
+              </div>
+              <div class="faq_answer">
+                <div class="faq_answer_en">
+                  <p>We accept Visa, Mastercard, Fawry, Vodafone Cash, InstaPay, and Cash on Delivery (COD) for eligible
+                    orders.</p>
                 </div>
-                <div class=faq-answer>
-                  <div class=bi-ling>
-                    <div class=en>
-                      <p>We accept Visa, Mastercard, Fawry, Vodafone Cash, InstaPay, and Cash on
-                        Delivery (COD) for eligible orders.</p>
-                    </div>
-                    <div class=ar>
-                      <p>نقبل فيزا، ماستركارد، فوري، فودافون كاش، إنستا باي، والدفع عند الاستلام
-                        للطلبات المؤهلة.</p>
-                    </div>
-                  </div>
+                <div class="faq_answer_ar">
+                  <p>نقبل فيزا، ماستركارد، فوري، فودافون كاش، إنستا باي، والدفع عند الاستلام للطلبات المؤهلة.</p>
                 </div>
               </div>
             </div>
-            <div class="card faq-card">
-              <div class=card-body>
-                <div class=faq-trigger role=button tabindex=0 aria-expanded=false>
-                  <div class="bi-ling faq-question-text-container">
-                    <div class=en>
-                      <h4 class=faq-question-title>How is meat packaged for freshness?</h4>
-                    </div>
-                    <div class=ar>
-                      <h4 class=faq-question-title>كيف يتم تغليف اللحوم لضمان النضارة؟</h4>
-                    </div>
-                  </div><i class="fas fa-chevron-down faq-toggle-icon"></i>
+
+            <div class="faq_item">
+              <div class="faq_question">
+                <div class="faq_question_en">How is meat packaged for freshness?</div>
+                <div class="faq_question_ar">كيف يتم تغليف اللحوم لضمان النضارة؟</div>
+              </div>
+              <div class="faq_answer">
+                <div class="faq_answer_en">
+                  <p>Fresh meat is vacuum-sealed. Udheya meat is packaged hygienically based on your selected package
+                    options.</p>
                 </div>
-                <div class=faq-answer>
-                  <div class=bi-ling>
-                    <div class=en>
-                      <p>Fresh meat is vacuum-sealed. Udheya meat is packaged hygienically based
-                        on your selected package options.</p>
-                    </div>
-                    <div class=ar>
-                      <p>اللحوم الطازجة معبأة بتفريغ الهواء. لحوم الأضحية تعبأ بشكل صحي بناءً على
-                        الباقة المختارة.</p>
-                    </div>
-                  </div>
+                <div class="faq_answer_ar">
+                  <p>اللحوم الطازجة معبأة بتفريغ الهواء. لحوم الأضحية تعبأ بشكل صحي بناءً على الباقة المختارة.</p>
                 </div>
               </div>
             </div>
-            <div class="card faq-card">
-              <div class=card-body>
-                <div class=faq-trigger role=button tabindex=0 aria-expanded=false>
-                  <div class="bi-ling faq-question-text-container">
-                    <div class=en>
-                      <h4 class=faq-question-title>How does the group purchase for Udheya work?
-                      </h4>
-                    </div>
-                    <div class=ar>
-                      <h4 class=faq-question-title>كيف يعمل الشراء الجماعي للأضحية؟</h4>
-                    </div>
-                  </div><i class="fas fa-chevron-down faq-toggle-icon"></i>
+
+            <div class="faq_item">
+              <div class="faq_question">
+                <div class="faq_question_en">How does the group purchase for Udheya work?</div>
+                <div class="faq_question_ar">كيف يعمل الشراء الجماعي للأضحية؟</div>
+              </div>
+              <div class="faq_answer">
+                <div class="faq_answer_en">
+                  <p>You can opt for a group purchase to share the cost of an Udheya animal. We can facilitate matching.
+                    Meat is divided equally or as agreed.</p>
                 </div>
-                <div class=faq-answer>
-                  <div class=bi-ling>
-                    <div class=en>
-                      <p>You can opt for a group purchase to share the cost of an Udheya animal.
-                        We can facilitate matching. Meat is divided equally or as agreed.</p>
-                    </div>
-                    <div class=ar>
-                      <p>يمكنك اختيار الشراء الجماعي لتقاسم تكلفة الأضحية. يمكننا تسهيل الربط.
-                        يقسم اللحم بالتساوي أو حسب الاتفاق.</p>
-                    </div>
-                  </div>
+                <div class="faq_answer_ar">
+                  <p>يمكنك اختيار الشراء الجماعي لتقاسم تكلفة الأضحية. يمكننا تسهيل الربط. يقسم اللحم بالتساوي أو حسب
+                    الاتفاق.</p>
                 </div>
               </div>
             </div>
-            <div class="card faq-card">
-              <div class=card-body>
-                <div class=faq-trigger role=button tabindex=0 aria-expanded=false>
-                  <div class="bi-ling faq-question-text-container">
-                    <div class=en>
-                      <h4 class=faq-question-title>Can I visit the farm to see the animals?</h4>
-                    </div>
-                    <div class=ar>
-                      <h4 class=faq-question-title>هل يمكنني زيارة المزرعة لرؤية الحيوانات؟</h4>
-                    </div>
-                  </div><i class="fas fa-chevron-down faq-toggle-icon"></i>
+
+            <div class="faq_item">
+              <div class="faq_question">
+                <div class="faq_question_en">Can I visit the farm to see the animals?</div>
+                <div class="faq_question_ar">هل يمكنني زيارة المزرعة لرؤية الحيوانات؟</div>
+              </div>
+              <div class="faq_answer">
+                <div class="faq_answer_en">
+                  <p>Yes, by appointment. Contact customer service to schedule a visit and learn about our farming
+                    practices, ensuring minimal disruption.</p>
                 </div>
-                <div class=faq-answer>
-                  <div class=bi-ling>
-                    <div class=en>
-                      <p>Yes, by appointment. Contact customer service to schedule a visit and
-                        learn about our farming practices, ensuring minimal disruption.</p>
-                    </div>
-                    <div class=ar>
-                      <p>نعم، بموعد. اتصل بخدمة العملاء لتحديد موعد زيارة ومعرفة المزيد عن
-                        ممارساتنا الزراعية، مع ضمان أقل قدر من الإزعاج.</p>
-                    </div>
-                  </div>
+                <div class="faq_answer_ar">
+                  <p>نعم، بموعد. اتصل بخدمة العملاء لتحديد موعد زيارة ومعرفة المزيد عن ممارساتنا الزراعية، مع ضمان أقل
+                    قدر من الإزعاج.</p>
                 </div>
               </div>
             </div>
-            <div class="card faq-card">
-              <div class=card-body>
-                <div class=faq-trigger role=button tabindex=0 aria-expanded=false>
-                  <div class="bi-ling faq-question-text-container">
-                    <div class=en>
-                      <h4 class=faq-question-title>Is your meat always fresh, or do you sell
-                        frozen?</h4>
-                    </div>
-                    <div class=ar>
-                      <h4 class=faq-question-title>هل لحومكم دائماً طازجة، أم تبيعون المجمد؟</h4>
-                    </div>
-                  </div><i class="fas fa-chevron-down faq-toggle-icon"></i>
+
+            <div class="faq_item">
+              <div class="faq_question">
+                <div class="faq_question_en">Is your meat always fresh, or do you sell frozen?</div>
+                <div class="faq_question_ar">هل لحومكم دائماً طازجة، أم تبيعون المجمد؟</div>
+              </div>
+              <div class="faq_answer">
+                <div class="faq_answer_en">
+                  <p>Our primary offering is fresh, never-frozen meat. Some specific items or bulk orders might be
+                    available frozen, clearly labeled.</p>
                 </div>
-                <div class=faq-answer>
-                  <div class=bi-ling>
-                    <div class=en>
-                      <p>Our primary offering is fresh, never-frozen meat. Some specific items or
-                        bulk orders might be available frozen, clearly labeled.</p>
-                    </div>
-                    <div class=ar>
-                      <p>عرضنا الأساسي هو اللحوم الطازجة غير المجمدة. بعض الأصناف المحددة أو
-                        الطلبات الكبيرة قد تكون مجمدة، ويتم توضيح ذلك.</p>
-                    </div>
-                  </div>
+                <div class="faq_answer_ar">
+                  <p>عرضنا الأساسي هو اللحوم الطازجة غير المجمدة. بعض الأصناف المحددة أو الطلبات الكبيرة قد تكون مجمدة،
+                    ويتم توضيح ذلك.</p>
                 </div>
               </div>
             </div>
-            <div class="card faq-card">
-              <div class=card-body>
-                <div class=faq-trigger role=button tabindex=0 aria-expanded=false>
-                  <div class="bi-ling faq-question-text-container">
-                    <div class=en>
-                      <h4 class=faq-question-title>What are your delivery areas and charges?</h4>
-                    </div>
-                    <div class=ar>
-                      <h4 class=faq-question-title>ما هي مناطق التوصيل ورسومها؟</h4>
-                    </div>
-                  </div><i class="fas fa-chevron-down faq-toggle-icon"></i>
+
+            <div class="faq_item">
+              <div class="faq_question">
+                <div class="faq_question_en">What are your delivery areas and charges?</div>
+                <div class="faq_question_ar">ما هي مناطق التوصيل ورسومها؟</div>
+              </div>
+              <div class="faq_answer">
+                <div class="faq_answer_en">
+                  <p>We deliver across major cities. Charges are based on location and order size. Use the shipping
+                    calculator in the Delivery section or see at checkout.</p>
                 </div>
-                <div class=faq-answer>
-                  <div class=bi-ling>
-                    <div class=en>
-                      <p>We deliver across major cities. Charges are based on location and order
-                        size. Use the shipping calculator in the Delivery section or see at
-                        checkout.</p>
-                    </div>
-                    <div class=ar>
-                      <p>نقوم بالتوصيل عبر المدن الرئيسية. تعتمد الرسوم على الموقع وحجم الطلب.
-                        استخدم حاسبة الشحن في قسم التوصيل أو راجعها عند الدفع.</p>
-                    </div>
-                  </div>
+                <div class="faq_answer_ar">
+                  <p>نقوم بالتوصيل عبر المدن الرئيسية. تعتمد الرسوم على الموقع وحجم الطلب. استخدم حاسبة الشحن في قسم
+                    التوصيل أو راجعها عند الدفع.</p>
                 </div>
               </div>
             </div>
           </div>
+
         </div>
         <div id=delivery-info class=mt-lg>
           <div class=section-header>
