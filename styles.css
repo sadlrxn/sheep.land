@@ -317,6 +317,7 @@
 
   .nav-menu li {
     position: relative;
+    list-style: none;
   }
 
   .nav-link {
@@ -1034,7 +1035,7 @@
 
   .payment-methods {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     gap: var(--s3)
   }
 
@@ -1053,7 +1054,7 @@
     cursor: pointer;
     transition: all .2s;
     text-align: center;
-    font-size: .85rem;
+    font-size: 0.65rem;
     height: 100%;
     min-height: 90px
   }
@@ -1547,8 +1548,7 @@
 
   .hero-revamped {
     padding-top: 12px;
-    padding-bottom: calc(var(--hero-section-padding-y) + var(--s6));
-    min-height: 100vh;
+    padding-bottom: 0.5rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1581,7 +1581,6 @@
   }
 
   .hero-revamped .hero-content-wrapper {
-    max-width: 900px;
     width: 100%;
     padding: 0;
     position: relative;
@@ -1651,9 +1650,8 @@
     border-color: var(--td);
   }
 
-  .hero-revamped .hero-promo-banner-container {
+  .promo .hero-promo-banner-container {
     width: 100%;
-    max-width: 800px;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: var(--s7);
@@ -1664,7 +1662,7 @@
     padding-right: var(--s4);
   }
 
-  .hero-revamped .promo-banner {
+  .promo .promo-banner {
     padding: var(--s4) var(--s5);
     background: linear-gradient(135deg, var(--c3), #FFD1A3);
     color: var(--thl);
@@ -1676,41 +1674,41 @@
     gap: var(--s5);
   }
 
-  .hero-revamped .promo-banner-content {
+  .promo .promo-banner-content {
     display: flex;
     align-items: center;
     gap: var(--s4);
   }
 
-  .hero-revamped .promo-banner-content i {
+  .promo .promo-banner-content i {
     font-size: 2.5rem;
     color: var(--c1d);
     opacity: .8;
   }
 
-  .hero-revamped .promo-banner .bi-ling {
+  .promo .promo-banner .bi-ling {
     gap: var(--s1);
   }
 
-  .hero-revamped .promo-banner h3 {
+  .promo .promo-banner h3 {
     color: var(--c1d);
     font-size: clamp(1.2rem, 2.5vw, 1.6rem);
     margin-bottom: var(--s1);
   }
 
-  .hero-revamped .promo-banner p {
+  .promo .promo-banner p {
     font-size: .9rem;
     margin-bottom: 0;
     color: var(--c1d);
     opacity: .9;
   }
 
-  .hero-revamped .promo-banner p span {
+  .promo .promo-banner p span {
     color: var(--c1d);
     font-weight: bold;
   }
 
-  .hero-revamped .promo-banner .btn-warning {
+  .promo .promo-banner .btn-warning {
     background-color: var(--bc);
     color: var(--c3d);
     box-shadow: var(--sh1);
@@ -1718,7 +1716,7 @@
     padding: var(--s2) var(--s4);
   }
 
-  .hero-revamped .promo-banner .btn-warning:hover {
+  .promo .promo-banner .btn-warning:hover {
     background-color: var(--c1d);
     color: var(--td);
   }
@@ -2127,7 +2125,7 @@
     }
 
     .payment-methods {
-      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr))
+      grid-template-columns: repeat(auto-fit, minmax(80px, 1fr))
     }
 
     .bi-ling:not(.bi-ling-compact):not(.hero-revamped .hero-main-text .bi-ling):not(.hero-revamped .feature-item .bi-ling):not(.section-header .bi-ling):not(.contact-list .bi-ling) {
