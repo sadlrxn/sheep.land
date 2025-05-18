@@ -246,6 +246,96 @@
     }
   }
 
+
+  .text-xs {
+    font-size: var(--font-xs);
+  }
+
+  .text-sm {
+    font-size: var(--font-sm);
+  }
+
+  .text-md {
+    font-size: var(--font-md);
+  }
+
+  .text-lg {
+    font-size: var(--font-lg);
+  }
+
+  .text-xl {
+    font-size: var(--font-xl);
+  }
+
+  .text-xxl {
+    font-size: var(--font-xxl);
+  }
+
+  .text-display {
+    font-size: var(--font-display);
+  }
+
+  .text-center {
+    text-align: center;
+  }
+
+  .text-right {
+    text-align: right;
+  }
+
+  .text-light {
+    color: var(--text-light);
+  }
+
+  .text-lighter {
+    color: var(--text-lighter);
+  }
+
+  .text-primary {
+    color: var(--primary);
+  }
+
+  .text-accent {
+    color: var(--accent);
+  }
+
+  .text-success {
+    color: var(--success);
+  }
+
+  .text-warning {
+    color: var(--warning);
+  }
+
+  .fw-normal {
+    font-weight: 400;
+  }
+
+  .grid {
+    display: grid;
+    gap: var(--space);
+  }
+
+  .grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .grid-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .m-0 {
+    margin: 0;
+  }
+
+  .mt-xs {
+    margin-top: var(--space-xs);
+  }
+
   .grid {
     display: grid;
     gap: var(--s5)
@@ -716,7 +806,7 @@
   }
 
   .card-title {
-    font-size: 1.4rem;
+    font-size: 0.95rem;
     color: var(--th);
     margin-bottom: var(--s2)
   }
@@ -776,6 +866,10 @@
     color: var(--c1);
     margin-bottom: var(--s2);
     font-size: 1.8rem
+  }
+
+  .info-box .en {
+    text-align: left;
   }
 
   .info-box h4 {
@@ -882,7 +976,7 @@
 
   .package-features li {
     margin-bottom: var(--s2);
-    font-size: .95rem;
+    font-size: 0.8rem;
     color: var(--tm);
     display: flex;
     align-items: flex-start
@@ -892,12 +986,11 @@
     color: var(--c2);
     margin-right: var(--s2);
     margin-top: 5px;
-    font-size: .9em
+    font-size: .8em
   }
 
-  .form-group {
-    margin-bottom: var(--s4)
-  }
+  .form-group {}
+
 
   .form-label {
     display: block;
@@ -950,7 +1043,8 @@
 
   .form-aside {
     background-color: var(--b2);
-    padding: var(--s5);
+    padding-right: 2rem;
+    padding-left: 2rem;
     border-radius: var(--r3)
   }
 
@@ -1035,7 +1129,7 @@
 
   .payment-methods {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
     gap: var(--s3)
   }
 
